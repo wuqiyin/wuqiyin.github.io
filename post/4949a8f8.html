@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>virtualBox安装centos7.2 | silver@wq</title>
+  <meta name="keywords" content=" virtualBox ">
+  <meta name="description" content="virtualBox安装centos7.2 | silver@wq">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="记录一些程序设计灵感，以及程序设计领域相关的概念和问题">
+<meta name="keywords" content="silver@wq,php,js,javascript,phpstorm,english,git,windos7,yii,sql,mysql,linux,浏览器,程序设计">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://blog.silverwq.top/about/index.html">
+<meta property="og:site_name" content="silver@wq">
+<meta property="og:description" content="记录一些程序设计灵感，以及程序设计领域相关的概念和问题">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-01-19T00:55:21.463Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="about">
+<meta name="twitter:description" content="记录一些程序设计灵感，以及程序设计领域相关的概念和问题">
+
+
+<link rel="icon" href="/img/favicon-16x16.png">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/sublime.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/profile.png">
+</a>
+<div class="author">
+    <span>silver@wq</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="rss" href="/atom.xml" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-rss"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="github" href="https://github.com/wuqiyin" target="_blank" rel="external nofollow noopener noreferrer">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:silverwq@qq.com" target="_blank" rel="external nofollow noopener noreferrer">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=925662696&site=qq&menu=yes" target="_blank" rel="external nofollow noopener noreferrer">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="kugou" href="https://www.kugou.com/" target="_blank" rel="external nofollow noopener noreferrer">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-kugou"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+</div>
+
+
+
+<a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(63)</small></div></li>
+    
+        
+            
+            <li><div data-rel="其它">其它<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="技术">技术<small>(21)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="工具">工具<small>(40)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    <a class="dynamic-menu " target="_blank" href="https://github.com/wuqiyin" rel="external nofollow noopener noreferrer">github</a>
+    
+    </div>
+    <div><a style="border-right: 1px solid #fff; width: 49%" class="about site_url" href="/about">关于</a><a style="width: 50%" class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="63">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off" id="local-search-input">
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none">
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">规范</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">快捷键</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">elasticSearch</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">php</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">go</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">http</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">laradock</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">mysql</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">ssh</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">thinkPhp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">virtualBox</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">yii</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">android</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">chkConfig</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">cmder</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">chrome</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">crontab</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">ditto</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">gitBash</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cmd</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">git</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">listary</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">linux</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">memcached</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">navicat</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">nginx</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">phpStorm</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">sublime</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">vagrant</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">vim</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">windows</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">yum</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="其它 " href="/post/bbbae7cf.html" data-tag="快捷键" data-author>
+            <span class="post-title" title="快捷键说明">快捷键说明</span>
+            <span class="post-date" title="2020-01-22 15:30:55">2020/01/22</span>
+        </a>
+        
+        <a id="top" class="其它 " href="/post/15159e71.html" data-tag="规范" data-author>
+            <span class="post-title" title="写作规范">写作规范</span>
+            <span class="post-date" title="2020-01-18 13:30:39">2020/01/18</span>
+        </a>
+        
+        <a id="top" class="工具 " href="/post/65edf23c.html" data-tag="cmd" data-author>
+            <span class="post-title" title="cmd常用命令">cmd常用命令</span>
+            <span class="post-date" title="2019-05-31 23:00:44">2019/05/31</span>
+        </a>
+        
+        <a class="技术 " href="/post/525017a6.html" data-tag="thinkPhp" data-author>
+            <span class="post-title" title="tp3.2使用心得">tp3.2使用心得</span>
+            <span class="post-date" title="2019-10-15 13:44:48">2019/10/15</span>
+        </a>
+        
+        <a class="技术 " href="/post/a867c080.html" data-tag="http" data-author>
+            <span class="post-title" title="http技术">http技术</span>
+            <span class="post-date" title="2019-10-09 14:38:26">2019/10/09</span>
+        </a>
+        
+        <a class="技术 " href="/post/dc4896e1.html" data-tag="mysql" data-author>
+            <span class="post-title" title="mysql高性能优化">mysql高性能优化</span>
+            <span class="post-date" title="2019-10-05 14:17:03">2019/10/05</span>
+        </a>
+        
+        <a class="技术 " href="/post/1311505c.html" data-tag="php" data-author>
+            <span class="post-title" title="php开发">php开发</span>
+            <span class="post-date" title="2019-09-29 13:52:37">2019/09/29</span>
+        </a>
+        
+        <a class="技术 " href="/post/f4bf1653.html" data-tag="ssh" data-author>
+            <span class="post-title" title="ssh使用">ssh使用</span>
+            <span class="post-date" title="2019-09-29 13:03:57">2019/09/29</span>
+        </a>
+        
+        <a class="技术 " href="/post/8c17f486.html" data-tag="laradock" data-author>
+            <span class="post-title" title="LaraDock新手使用教程">LaraDock新手使用教程</span>
+            <span class="post-date" title="2019-09-13 10:01:04">2019/09/13</span>
+        </a>
+        
+        <a class="技术 " href="/post/4949a8f8.html" data-tag="virtualBox" data-author>
+            <span class="post-title" title="virtualBox安装centos7.2">virtualBox安装centos7.2</span>
+            <span class="post-date" title="2019-09-07 11:24:34">2019/09/07</span>
+        </a>
+        
+        <a class="技术 " href="/post/6a51fa6.html" data-tag="elasticSearch" data-author>
+            <span class="post-title" title="elasticSearch顶尖高手系列-快速入门篇">elasticSearch顶尖高手系列-快速入门篇</span>
+            <span class="post-date" title="2019-08-25 17:52:44">2019/08/25</span>
+        </a>
+        
+        <a class="技术 " href="/post/a347551a.html" data-tag="go" data-author>
+            <span class="post-title" title="go语言基础教程">go语言基础教程</span>
+            <span class="post-date" title="2019-08-14 21:17:25">2019/08/14</span>
+        </a>
+        
+        <a class="技术 " href="/post/2d7a763a.html" data-tag="php" data-author>
+            <span class="post-title" title="phpSpreadsheet使用">phpSpreadsheet使用</span>
+            <span class="post-date" title="2019-08-06 22:12:55">2019/08/06</span>
+        </a>
+        
+        <a class="技术 " href="/post/bfdcff9a.html" data-tag="php" data-author>
+            <span class="post-title" title="php递归树形结构">php递归树形结构</span>
+            <span class="post-date" title="2019-06-14 13:55:28">2019/06/14</span>
+        </a>
+        
+        <a class="技术 " href="/post/7abb40af.html" data-tag="php" data-author>
+            <span class="post-title" title="php数组-实例.md">php数组-实例.md</span>
+            <span class="post-date" title="2019-06-05 21:29:43">2019/06/05</span>
+        </a>
+        
+        <a class="工具 " href="/post/2b279d40.html" data-tag="listary" data-author>
+            <span class="post-title" title="listary使用">listary使用</span>
+            <span class="post-date" title="2019-06-02 22:28:56">2019/06/02</span>
+        </a>
+        
+        <a class="工具 " href="/post/1fcd234f.html" data-tag="ditto" data-author>
+            <span class="post-title" title="ditto使用">ditto使用</span>
+            <span class="post-date" title="2019-06-02 21:00:53">2019/06/02</span>
+        </a>
+        
+        <a class="工具 " href="/post/238c95be.html" data-tag="sublime" data-author>
+            <span class="post-title" title="sublime">sublime</span>
+            <span class="post-date" title="2019-06-01 10:36:04">2019/06/01</span>
+        </a>
+        
+        <a class="技术 " href="/post/987306d8.html" data-tag="php" data-author>
+            <span class="post-title" title="composer">composer</span>
+            <span class="post-date" title="2019-06-01 10:33:55">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/25312b9b.html" data-tag="php" data-author>
+            <span class="post-title" title="php7.2.3编译安装">php7.2.3编译安装</span>
+            <span class="post-date" title="2019-06-01 10:32:51">2019/06/01</span>
+        </a>
+        
+        <a class="技术 " href="/post/37c4afc8.html" data-tag="yii" data-author>
+            <span class="post-title" title="yii-模型">yii-模型</span>
+            <span class="post-date" title="2019-06-01 10:31:39">2019/06/01</span>
+        </a>
+        
+        <a class="技术 " href="/post/b98e5f11.html" data-tag="mysql" data-author>
+            <span class="post-title" title="深入理解sql子句">深入理解sql子句</span>
+            <span class="post-date" title="2019-06-01 10:29:53">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/3bf849ad.html" data-tag="phpStorm" data-author>
+            <span class="post-title" title="phpstorm插件">phpstorm插件</span>
+            <span class="post-date" title="2019-06-01 10:18:11">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/63323c.html" data-tag="phpStorm" data-author>
+            <span class="post-title" title="phpStorm常用设置">phpStorm常用设置</span>
+            <span class="post-date" title="2019-06-01 10:16:17">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/d4ee0365.html" data-tag="navicat" data-author>
+            <span class="post-title" title="navicat">navicat</span>
+            <span class="post-date" title="2019-06-01 10:14:54">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/eb3635c.html" data-tag="php" data-author>
+            <span class="post-title" title="pecl">pecl</span>
+            <span class="post-date" title="2019-06-01 10:13:41">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/191b2c68.html" data-tag="php" data-author>
+            <span class="post-title" title="php-fpm管理php进程">php-fpm管理php进程</span>
+            <span class="post-date" title="2019-06-01 10:12:39">2019/06/01</span>
+        </a>
+        
+        <a class="技术 " href="/post/f3e09151.html" data-tag="php" data-author>
+            <span class="post-title" title="php安装扩展">php安装扩展</span>
+            <span class="post-date" title="2019-06-01 10:11:41">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/f713c4e6.html" data-tag="windows" data-author>
+            <span class="post-title" title="window10常用快捷键">window10常用快捷键</span>
+            <span class="post-date" title="2019-06-01 10:08:35">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/f118c972.html" data-tag="windows" data-author>
+            <span class="post-title" title="windows7旗舰版系统重装">windows7旗舰版系统重装</span>
+            <span class="post-date" title="2019-06-01 09:57:42">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/9407bf68.html" data-tag="crontab" data-author>
+            <span class="post-title" title="crontab使用">crontab使用</span>
+            <span class="post-date" title="2019-06-01 09:49:49">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/7a8b8960.html" data-tag="memcached" data-author>
+            <span class="post-title" title="memcached安装">memcached安装</span>
+            <span class="post-date" title="2019-06-01 09:44:51">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/303cf186.html" data-tag="nginx" data-author>
+            <span class="post-title" title="nginx常见问题">nginx常见问题</span>
+            <span class="post-date" title="2019-05-31 23:41:44">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/5329de73.html" data-tag="vagrant" data-author>
+            <span class="post-title" title="vagrant管理">vagrant管理</span>
+            <span class="post-date" title="2019-05-31 23:39:20">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/16fe430b.html" data-tag="nginx" data-author>
+            <span class="post-title" title="nginx安装">nginx安装</span>
+            <span class="post-date" title="2019-05-31 23:28:12">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/b7b4a211.html" data-tag="vagrant" data-author>
+            <span class="post-title" title="vagrant环境搭建">vagrant环境搭建</span>
+            <span class="post-date" title="2019-05-31 23:24:10">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/1f1783ef.html" data-tag="mysql" data-author>
+            <span class="post-title" title="mysql5.6.38安装">mysql5.6.38安装</span>
+            <span class="post-date" title="2019-05-31 23:20:42">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/e7de59c5.html" data-tag="mysql" data-author>
+            <span class="post-title" title="mysql的ddl">mysql的ddl</span>
+            <span class="post-date" title="2019-05-31 23:18:05">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/8c31560b.html" data-tag="vim" data-author>
+            <span class="post-title" title="vim常用命令">vim常用命令</span>
+            <span class="post-date" title="2019-05-31 23:06:27">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/4ab1a8de.html" data-tag="mysql" data-author>
+            <span class="post-title" title="mysql常用命令">mysql常用命令</span>
+            <span class="post-date" title="2019-05-31 23:04:32">2019/05/31</span>
+        </a>
+        
+        <a class="技术 " href="/post/edbab175.html" data-tag="php" data-author>
+            <span class="post-title" title="php数组-使用说明">php数组-使用说明</span>
+            <span class="post-date" title="2019-05-31 16:22:33">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/b8b76378.html" data-tag="nginx" data-author>
+            <span class="post-title" title="nginx配置访问密码">nginx配置访问密码</span>
+            <span class="post-date" title="2019-05-31 15:55:57">2019/05/31</span>
+        </a>
+        
+        <a class="技术 " href="/post/790dc092.html" data-tag="mysql" data-author>
+            <span class="post-title" title="sql实例">sql实例</span>
+            <span class="post-date" title="2019-05-31 11:06:07">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/40c1d23c.html" data-tag="chrome" data-author>
+            <span class="post-title" title="chrome开发者工具的小技巧">chrome开发者工具的小技巧</span>
+            <span class="post-date" title="2019-05-28 23:32:34">2019/05/28</span>
+        </a>
+        
+        <a class="工具 " href="/post/25c5187c.html" data-tag="cmder" data-author>
+            <span class="post-title" title="cmder使用">cmder使用</span>
+            <span class="post-date" title="2019-05-26 19:18:46">2019/05/26</span>
+        </a>
+        
+        <a class="工具 " href="/post/2d353c21.html" data-tag="git" data-author>
+            <span class="post-title" title="git子模块">git子模块</span>
+            <span class="post-date" title="2019-05-15 23:18:31">2019/05/15</span>
+        </a>
+        
+        <a class="工具 " href="/post/79626d9d.html" data-tag="android" data-author>
+            <span class="post-title" title="安卓开发环境搭建">安卓开发环境搭建</span>
+            <span class="post-date" title="2019-05-14 23:06:39">2019/05/14</span>
+        </a>
+        
+        <a class="工具 " href="/post/29ef2bf9.html" data-tag="gitBash" data-author>
+            <span class="post-title" title="windows的git bash设置永久别名">windows的git bash设置永久别名</span>
+            <span class="post-date" title="2019-05-12 18:44:01">2019/05/12</span>
+        </a>
+        
+        <a class="工具 " href="/post/a986cf0f.html" data-tag="phpStorm" data-author>
+            <span class="post-title" title="phpStorm快捷键">phpStorm快捷键</span>
+            <span class="post-date" title="2019-05-06 14:10:34">2019/05/06</span>
+        </a>
+        
+        <a class="工具 " href="/post/5d3f8823.html" data-tag="phpStorm" data-author>
+            <span class="post-title" title="phpstorm跳回快捷和windos屏幕旋转快捷冲突">phpstorm跳回快捷和windos屏幕旋转快捷冲突</span>
+            <span class="post-date" title="2019-04-20 17:58:26">2019/04/20</span>
+        </a>
+        
+        <a class="技术 " href="/post/6ed76400.html" data-tag="git" data-author>
+            <span class="post-title" title="git在push的时候自动更新">git在push的时候自动更新</span>
+            <span class="post-date" title="2019-04-20 12:37:18">2019/04/20</span>
+        </a>
+        
+        <a class="工具 " href="/post/e7ccc5c2.html" data-tag="gitBash" data-author>
+            <span class="post-title" title="gitBash 中文乱码">gitBash 中文乱码</span>
+            <span class="post-date" title="2019-04-18 18:49:11">2019/04/18</span>
+        </a>
+        
+        <a class="工具 " href="/post/aaf49e25.html" data-tag="docker" data-author>
+            <span class="post-title" title="docker指南">docker指南</span>
+            <span class="post-date" title="2019-04-10 16:28:57">2019/04/10</span>
+        </a>
+        
+        <a class="工具 " href="/post/94fe38d7.html" data-tag="yum" data-author>
+            <span class="post-title" title="yum常用命令">yum常用命令</span>
+            <span class="post-date" title="2019-04-10 11:16:48">2019/04/10</span>
+        </a>
+        
+        <a class="工具 " href="/post/f1dca051.html" data-tag="hexo" data-author>
+            <span class="post-title" title="HEXO SEO优化插件">HEXO SEO优化插件</span>
+            <span class="post-date" title="2019-04-04 10:25:00">2019/04/04</span>
+        </a>
+        
+        <a class="技术 " href="/post/30492970.html" data-tag="php" data-author>
+            <span class="post-title" title="php中的闭包和匿名函数">php中的闭包和匿名函数</span>
+            <span class="post-date" title="2019-04-03 11:17:09">2019/04/03</span>
+        </a>
+        
+        <a class="技术 " href="/post/3db89d5f.html" data-tag="php" data-author>
+            <span class="post-title" title="lavarel核心概念">lavarel核心概念</span>
+            <span class="post-date" title="2019-04-02 10:24:12">2019/04/02</span>
+        </a>
+        
+        <a class="工具 " href="/post/843cc845.html" data-tag="git" data-author>
+            <span class="post-title" title="gitignore文件">gitignore文件</span>
+            <span class="post-date" title="2019-03-29 15:54:44">2019/03/29</span>
+        </a>
+        
+        <a class="工具 " href="/post/925e341a.html" data-tag="git" data-author>
+            <span class="post-title" title="git配置">git配置</span>
+            <span class="post-date" title="2019-03-29 15:52:50">2019/03/29</span>
+        </a>
+        
+        <a class="工具 " href="/post/423abe9e.html" data-tag="git" data-author>
+            <span class="post-title" title="git常用命令">git常用命令</span>
+            <span class="post-date" title="2019-03-29 15:15:00">2019/03/29</span>
+        </a>
+        
+        <a class="工具 " href="/post/5a3fb175.html" data-tag="hexo" data-author>
+            <span class="post-title" title="hexo插件">hexo插件</span>
+            <span class="post-date" title="2019-03-28 22:51:53">2019/03/28</span>
+        </a>
+        
+        <a class="工具 " href="/post/26175.html" data-tag="linux" data-author>
+            <span class="post-title" title="liunx常用命令">liunx常用命令</span>
+            <span class="post-date" title="2019-03-28 21:39:50">2019/03/28</span>
+        </a>
+        
+        <a class="工具 " href="/post/38848.html" data-tag="chkConfig" data-author>
+            <span class="post-title" title="chkconfig服务管理说明">chkconfig服务管理说明</span>
+            <span class="post-date" title="2019-03-28 21:00:00">2019/03/28</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-tech/virtualBox安装centos7-2" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">virtualBox安装centos7.2</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="技术">技术</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color1">virtualBox</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title="更新时间: 2020-01-19 08:55:21">2019-09-07 11:24</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基于virtualBox的开发环境搭建"><span class="toc-text">基于virtualBox的开发环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令操作"><span class="toc-text">命令操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#启动Headless模式"><span class="toc-text">启动Headless模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#虚拟机状态控制"><span class="toc-text">虚拟机状态控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#共享目录设定"><span class="toc-text">共享目录设定</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#桥接网络"><span class="toc-text">桥接网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#系统环境代理设置"><span class="toc-text">系统环境代理设置</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-6 i,
+    .toc-level-6 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<h2 id="基于virtualBox的开发环境搭建"><a href="#基于virtualBox的开发环境搭建" class="headerlink" title="基于virtualBox的开发环境搭建"></a>基于virtualBox的开发环境搭建</h2></blockquote>
+<h3 id="命令操作"><a href="#命令操作" class="headerlink" title="命令操作"></a>命令操作</h3><h4 id="启动Headless模式"><a href="#启动Headless模式" class="headerlink" title="启动Headless模式"></a>启动Headless模式</h4><p>VirtualBox虚拟机有一种模式为headless模式，即无显示模式：</p>
+<pre><code>VBoxManage startvm &lt;uuid&gt;|&lt;name&gt; [--type gui|sdl|headless]
+</code></pre><p>假设我们的虚拟机叫做nenew，我们像启动headless模式的虚拟机的化，我们可以执行下列命令：</p>
+<pre><code class="powershell">vboxmanage startvm nenew --type headless
+</code></pre>
+<p>上面的这条命令可以运行headless模式的虚拟机。在运行完命令后虚拟机应该已经后台运行了，并出现下行提示：</p>
+<pre><code class="powershell">Waiting for the VM to power on…
+VM has been successfully started.
+</code></pre>
+<p>虚拟机已经后台运行了，可使用下列命令对其进行关闭重庆等操作。</p>
+<h4 id="虚拟机状态控制"><a href="#虚拟机状态控制" class="headerlink" title="虚拟机状态控制"></a>虚拟机状态控制</h4><pre><code class="powershell">VBoxManage controlvm &lt;uuid&gt;|&lt;name&gt; pause|resume|reset|poweroff|savestate|
+</code></pre>
+<p>例如关闭刚才启动的headless虚拟机nenew我们可以用下面命令来完成</p>
+<pre><code class="powershell">vboxmanage controlvm nenew poweroff
+</code></pre>
+<h4 id="共享目录设定"><a href="#共享目录设定" class="headerlink" title="共享目录设定"></a>共享目录设定</h4><p><strong>进入centos系统：</strong></p>
+<p>一、安装基本依赖，如果没有这些将无法安装增强功能</p>
+<ol>
+<li>更新kernel</li>
+</ol>
+<pre><code class="shell">yum update kernel -y
+</code></pre>
+<ol start="2">
+<li>安装<strong>kernel-headers, kernel-devel</strong> 和其他要求的包</li>
+</ol>
+<pre><code class="shell">#安装完之后切记要重启虚拟机，不然无法安装成功
+yum install kernel-headers kernel-devel gcc make -y
+</code></pre>
+<p>​    3.重启系统，确保加载新的kernel</p>
+<pre><code class="shell"> init 6
+</code></pre>
+<p>二、安装增强功能</p>
+<p>在设备选项里直接点安装增强功能会报错无法加载，应该是VboxguestAdditions.iso被占用的原因。所有要把安装目录下的VboxguestAdditions.iso复制到其他位置，然后执行下面的分配光驱方式来挂载安装即可</p>
+<p>1.挂载镜像到系统</p>
+<p><img src="../images/1568300454268.png" alt="1568300454268"></p>
+<p>2.执行挂载命令，将虚拟光盘挂在到 /mnt/cdrom，如果没有cdrom目录，则先创建之</p>
+<pre><code class="shell">mkdir /mnt/cdrom
+mount /dev/cdrom /mnt/cdrom
+</code></pre>
+<ol start="3">
+<li>复制脚本到/tmp目录下</li>
+</ol>
+<pre><code class="bash">cd /mnt/cdrom
+cp VBoxLinuxAdditions.run /tmp
+cd /tmp
+chmod 777 VBoxLinuxAdditions.run
+</code></pre>
+<p>4.执行安装，如果没有第一步的内容，可能将无法安装成功</p>
+<pre><code class="shell">./VBoxLinuxAdditions.run
+</code></pre>
+<p>最后输出<code>VirtualBox Guest Additions: Running kernel modules will not be replaced until the system is restarted</code>的话表示安装成功，可以挂载共享目录了</p>
+<p>三、添加挂载目录</p>
+<p><img src="../images/1568301384847.png" alt="1568301384847"></p>
+<p>上面的操作也可以用命令来实现</p>
+<pre><code class="shell">#删除
+VBoxManage sharedfolder remove centos --name data
+
+#添加名称为www的共享目录
+vboxmanage  sharedfolder add centos --name www --hostpath F:\www --automount
+</code></pre>
+<p>手动挂载</p>
+<pre><code class="shell">#之后即可看到共享目录了
+mount -t vboxsf www(主机上的分享文件夹的名称) /var/www(虚拟机系统里的文件名称)
+</code></pre>
+<h3 id="桥接网络"><a href="#桥接网络" class="headerlink" title="桥接网络"></a>桥接网络</h3><p>virtualbox设置桥接模式联网，==注意：选择电脑正在使用的网卡！！！共享同一张网卡==</p>
+<p><img src="../images/1567827097948.png" alt="1567827097948"></p>
+<p>使用命令查看虚拟机运行的网卡配置，并且按照下文修改配置</p>
+<pre><code># ifconfig / ip addr
+# cd /etc/sysconfig/network-scripts/
+# vi ifcfg-enp0s3
+</code></pre><pre><code class="shell">TYPE=Ethernet
+BOOTPROTO=dhcp
+############改动部分开始############
+#动态IP
+#BOOTPROTO=&quot;dhcp&quot;
+
+#静态IP设置
+BOOTPROTO=&quot;static&quot;
+IPADDR=192.168.1.222  #静态ip要符合网关内的
+NETMASK=255.255.255.0 #查看物理机的掩码
+GATEWAY=192.168.1.1   #物理机的网关
+DNS1=114.114.114.114
+############改动部分结束############
+
+DEFROUTE=yes
+PEERDNS=yes
+PEERROUTES=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_PEERDNS=yes
+IPV6_PEERROUTES=yes
+IPV6_FAILURE_FATAL=no
+NAME=enp0s3
+UUID=d592be2d-d56f-4b37-887c-448cd9e8b696
+DEVICE=enp0s3
+############改动部分开始############
+#ONBOOT=no
+ONBOOT=yes
+############改动部分结束############
+</code></pre>
+<p>修改完成重启网络服务即可</p>
+<pre><code class="shell">service network restart
+ping www.baidu.com
+</code></pre>
+<h3 id="系统环境代理设置"><a href="#系统环境代理设置" class="headerlink" title="系统环境代理设置"></a>系统环境代理设置</h3><p>编辑文件为/etc/profile，如果只想给自己的账户设置，则编辑~/.bashrc即可</p>
+<p>添加三行：</p>
+<pre><code class="shell">\# add proxy for network
+export http_proxy=&quot;http://child-prc.intel.com:913&quot;
+export https_proxy=&quot;http://child-prc.intel.com:913&quot;
+export ftp_proxy=$http_proxy
+</code></pre>
+<p>然后source /etc/profile 或者source ~/.bashrc即可</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>virtualBox安装centos7.2</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="silver@wq">silver@wq</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-09-07, 11:24:34</p>
+    <p><span class="copy-title">最后更新:</span>2020-01-19, 08:55:21</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/post/4949a8f8.html" title="virtualBox安装centos7.2">http://blog.silverwq.top/post/4949a8f8.html</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2019 Silverwq</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="/js/script.js?v=1.0.1"></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#规范','#快捷键','#elasticSearch','#php','#go','#http','#laradock','#mysql','#ssh','#thinkPhp','#virtualBox','#yii','#android','#chkConfig','#cmder','#chrome','#crontab','#ditto','#gitBash','#cmd','#docker','#git','#hexo','#listary','#linux','#memcached','#navicat','#nginx','#phpStorm','#sublime','#vagrant','#vim','#windows','#yum',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out">
+
+</div>
+<div class="mobile-menus">
+    
+    
+    
+    
+    <a class="dynamic-menu " target="_blank" href="https://github.com/wuqiyin" rel="external nofollow noopener noreferrer">github</a>
+    
+</div>
+
+
+</html>

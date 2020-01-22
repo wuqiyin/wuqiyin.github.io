@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>docker指南 | silver@wq</title>
+  <meta name="keywords" content=" docker ">
+  <meta name="description" content="docker指南 | silver@wq">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="记录一些程序设计灵感，以及程序设计领域相关的概念和问题">
+<meta name="keywords" content="silver@wq,php,js,javascript,phpstorm,english,git,windos7,yii,sql,mysql,linux,浏览器,程序设计">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://blog.silverwq.top/about/index.html">
+<meta property="og:site_name" content="silver@wq">
+<meta property="og:description" content="记录一些程序设计灵感，以及程序设计领域相关的概念和问题">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-01-19T00:55:21.463Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="about">
+<meta name="twitter:description" content="记录一些程序设计灵感，以及程序设计领域相关的概念和问题">
+
+
+<link rel="icon" href="/img/favicon-16x16.png">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/sublime.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/profile.png">
+</a>
+<div class="author">
+    <span>silver@wq</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="rss" href="/atom.xml" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-rss"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="github" href="https://github.com/wuqiyin" target="_blank" rel="external nofollow noopener noreferrer">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:silverwq@qq.com" target="_blank" rel="external nofollow noopener noreferrer">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=925662696&site=qq&menu=yes" target="_blank" rel="external nofollow noopener noreferrer">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="kugou" href="https://www.kugou.com/" target="_blank" rel="external nofollow noopener noreferrer">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-kugou"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+</div>
+
+
+
+<a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(63)</small></div></li>
+    
+        
+            
+            <li><div data-rel="其它">其它<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="技术">技术<small>(21)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="工具">工具<small>(40)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    <a class="dynamic-menu " target="_blank" href="https://github.com/wuqiyin" rel="external nofollow noopener noreferrer">github</a>
+    
+    </div>
+    <div><a style="border-right: 1px solid #fff; width: 49%" class="about site_url" href="/about">关于</a><a style="width: 50%" class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="63">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off" id="local-search-input">
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none">
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">规范</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">快捷键</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">elasticSearch</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">php</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">go</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">http</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">laradock</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">mysql</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">ssh</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">thinkPhp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">virtualBox</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">yii</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">android</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">chkConfig</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">cmder</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">chrome</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">crontab</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">ditto</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">gitBash</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cmd</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">git</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">listary</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">linux</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">memcached</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">navicat</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">nginx</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">phpStorm</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">sublime</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">vagrant</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">vim</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">windows</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">yum</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="其它 " href="/post/bbbae7cf.html" data-tag="快捷键" data-author>
+            <span class="post-title" title="快捷键说明">快捷键说明</span>
+            <span class="post-date" title="2020-01-22 15:30:55">2020/01/22</span>
+        </a>
+        
+        <a id="top" class="其它 " href="/post/15159e71.html" data-tag="规范" data-author>
+            <span class="post-title" title="写作规范">写作规范</span>
+            <span class="post-date" title="2020-01-18 13:30:39">2020/01/18</span>
+        </a>
+        
+        <a id="top" class="工具 " href="/post/65edf23c.html" data-tag="cmd" data-author>
+            <span class="post-title" title="cmd常用命令">cmd常用命令</span>
+            <span class="post-date" title="2019-05-31 23:00:44">2019/05/31</span>
+        </a>
+        
+        <a class="技术 " href="/post/525017a6.html" data-tag="thinkPhp" data-author>
+            <span class="post-title" title="tp3.2使用心得">tp3.2使用心得</span>
+            <span class="post-date" title="2019-10-15 13:44:48">2019/10/15</span>
+        </a>
+        
+        <a class="技术 " href="/post/a867c080.html" data-tag="http" data-author>
+            <span class="post-title" title="http技术">http技术</span>
+            <span class="post-date" title="2019-10-09 14:38:26">2019/10/09</span>
+        </a>
+        
+        <a class="技术 " href="/post/dc4896e1.html" data-tag="mysql" data-author>
+            <span class="post-title" title="mysql高性能优化">mysql高性能优化</span>
+            <span class="post-date" title="2019-10-05 14:17:03">2019/10/05</span>
+        </a>
+        
+        <a class="技术 " href="/post/1311505c.html" data-tag="php" data-author>
+            <span class="post-title" title="php开发">php开发</span>
+            <span class="post-date" title="2019-09-29 13:52:37">2019/09/29</span>
+        </a>
+        
+        <a class="技术 " href="/post/f4bf1653.html" data-tag="ssh" data-author>
+            <span class="post-title" title="ssh使用">ssh使用</span>
+            <span class="post-date" title="2019-09-29 13:03:57">2019/09/29</span>
+        </a>
+        
+        <a class="技术 " href="/post/8c17f486.html" data-tag="laradock" data-author>
+            <span class="post-title" title="LaraDock新手使用教程">LaraDock新手使用教程</span>
+            <span class="post-date" title="2019-09-13 10:01:04">2019/09/13</span>
+        </a>
+        
+        <a class="技术 " href="/post/4949a8f8.html" data-tag="virtualBox" data-author>
+            <span class="post-title" title="virtualBox安装centos7.2">virtualBox安装centos7.2</span>
+            <span class="post-date" title="2019-09-07 11:24:34">2019/09/07</span>
+        </a>
+        
+        <a class="技术 " href="/post/6a51fa6.html" data-tag="elasticSearch" data-author>
+            <span class="post-title" title="elasticSearch顶尖高手系列-快速入门篇">elasticSearch顶尖高手系列-快速入门篇</span>
+            <span class="post-date" title="2019-08-25 17:52:44">2019/08/25</span>
+        </a>
+        
+        <a class="技术 " href="/post/a347551a.html" data-tag="go" data-author>
+            <span class="post-title" title="go语言基础教程">go语言基础教程</span>
+            <span class="post-date" title="2019-08-14 21:17:25">2019/08/14</span>
+        </a>
+        
+        <a class="技术 " href="/post/2d7a763a.html" data-tag="php" data-author>
+            <span class="post-title" title="phpSpreadsheet使用">phpSpreadsheet使用</span>
+            <span class="post-date" title="2019-08-06 22:12:55">2019/08/06</span>
+        </a>
+        
+        <a class="技术 " href="/post/bfdcff9a.html" data-tag="php" data-author>
+            <span class="post-title" title="php递归树形结构">php递归树形结构</span>
+            <span class="post-date" title="2019-06-14 13:55:28">2019/06/14</span>
+        </a>
+        
+        <a class="技术 " href="/post/7abb40af.html" data-tag="php" data-author>
+            <span class="post-title" title="php数组-实例.md">php数组-实例.md</span>
+            <span class="post-date" title="2019-06-05 21:29:43">2019/06/05</span>
+        </a>
+        
+        <a class="工具 " href="/post/2b279d40.html" data-tag="listary" data-author>
+            <span class="post-title" title="listary使用">listary使用</span>
+            <span class="post-date" title="2019-06-02 22:28:56">2019/06/02</span>
+        </a>
+        
+        <a class="工具 " href="/post/1fcd234f.html" data-tag="ditto" data-author>
+            <span class="post-title" title="ditto使用">ditto使用</span>
+            <span class="post-date" title="2019-06-02 21:00:53">2019/06/02</span>
+        </a>
+        
+        <a class="工具 " href="/post/238c95be.html" data-tag="sublime" data-author>
+            <span class="post-title" title="sublime">sublime</span>
+            <span class="post-date" title="2019-06-01 10:36:04">2019/06/01</span>
+        </a>
+        
+        <a class="技术 " href="/post/987306d8.html" data-tag="php" data-author>
+            <span class="post-title" title="composer">composer</span>
+            <span class="post-date" title="2019-06-01 10:33:55">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/25312b9b.html" data-tag="php" data-author>
+            <span class="post-title" title="php7.2.3编译安装">php7.2.3编译安装</span>
+            <span class="post-date" title="2019-06-01 10:32:51">2019/06/01</span>
+        </a>
+        
+        <a class="技术 " href="/post/37c4afc8.html" data-tag="yii" data-author>
+            <span class="post-title" title="yii-模型">yii-模型</span>
+            <span class="post-date" title="2019-06-01 10:31:39">2019/06/01</span>
+        </a>
+        
+        <a class="技术 " href="/post/b98e5f11.html" data-tag="mysql" data-author>
+            <span class="post-title" title="深入理解sql子句">深入理解sql子句</span>
+            <span class="post-date" title="2019-06-01 10:29:53">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/3bf849ad.html" data-tag="phpStorm" data-author>
+            <span class="post-title" title="phpstorm插件">phpstorm插件</span>
+            <span class="post-date" title="2019-06-01 10:18:11">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/63323c.html" data-tag="phpStorm" data-author>
+            <span class="post-title" title="phpStorm常用设置">phpStorm常用设置</span>
+            <span class="post-date" title="2019-06-01 10:16:17">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/d4ee0365.html" data-tag="navicat" data-author>
+            <span class="post-title" title="navicat">navicat</span>
+            <span class="post-date" title="2019-06-01 10:14:54">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/eb3635c.html" data-tag="php" data-author>
+            <span class="post-title" title="pecl">pecl</span>
+            <span class="post-date" title="2019-06-01 10:13:41">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/191b2c68.html" data-tag="php" data-author>
+            <span class="post-title" title="php-fpm管理php进程">php-fpm管理php进程</span>
+            <span class="post-date" title="2019-06-01 10:12:39">2019/06/01</span>
+        </a>
+        
+        <a class="技术 " href="/post/f3e09151.html" data-tag="php" data-author>
+            <span class="post-title" title="php安装扩展">php安装扩展</span>
+            <span class="post-date" title="2019-06-01 10:11:41">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/f713c4e6.html" data-tag="windows" data-author>
+            <span class="post-title" title="window10常用快捷键">window10常用快捷键</span>
+            <span class="post-date" title="2019-06-01 10:08:35">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/f118c972.html" data-tag="windows" data-author>
+            <span class="post-title" title="windows7旗舰版系统重装">windows7旗舰版系统重装</span>
+            <span class="post-date" title="2019-06-01 09:57:42">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/9407bf68.html" data-tag="crontab" data-author>
+            <span class="post-title" title="crontab使用">crontab使用</span>
+            <span class="post-date" title="2019-06-01 09:49:49">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/7a8b8960.html" data-tag="memcached" data-author>
+            <span class="post-title" title="memcached安装">memcached安装</span>
+            <span class="post-date" title="2019-06-01 09:44:51">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/303cf186.html" data-tag="nginx" data-author>
+            <span class="post-title" title="nginx常见问题">nginx常见问题</span>
+            <span class="post-date" title="2019-05-31 23:41:44">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/5329de73.html" data-tag="vagrant" data-author>
+            <span class="post-title" title="vagrant管理">vagrant管理</span>
+            <span class="post-date" title="2019-05-31 23:39:20">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/16fe430b.html" data-tag="nginx" data-author>
+            <span class="post-title" title="nginx安装">nginx安装</span>
+            <span class="post-date" title="2019-05-31 23:28:12">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/b7b4a211.html" data-tag="vagrant" data-author>
+            <span class="post-title" title="vagrant环境搭建">vagrant环境搭建</span>
+            <span class="post-date" title="2019-05-31 23:24:10">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/1f1783ef.html" data-tag="mysql" data-author>
+            <span class="post-title" title="mysql5.6.38安装">mysql5.6.38安装</span>
+            <span class="post-date" title="2019-05-31 23:20:42">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/e7de59c5.html" data-tag="mysql" data-author>
+            <span class="post-title" title="mysql的ddl">mysql的ddl</span>
+            <span class="post-date" title="2019-05-31 23:18:05">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/8c31560b.html" data-tag="vim" data-author>
+            <span class="post-title" title="vim常用命令">vim常用命令</span>
+            <span class="post-date" title="2019-05-31 23:06:27">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/4ab1a8de.html" data-tag="mysql" data-author>
+            <span class="post-title" title="mysql常用命令">mysql常用命令</span>
+            <span class="post-date" title="2019-05-31 23:04:32">2019/05/31</span>
+        </a>
+        
+        <a class="技术 " href="/post/edbab175.html" data-tag="php" data-author>
+            <span class="post-title" title="php数组-使用说明">php数组-使用说明</span>
+            <span class="post-date" title="2019-05-31 16:22:33">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/b8b76378.html" data-tag="nginx" data-author>
+            <span class="post-title" title="nginx配置访问密码">nginx配置访问密码</span>
+            <span class="post-date" title="2019-05-31 15:55:57">2019/05/31</span>
+        </a>
+        
+        <a class="技术 " href="/post/790dc092.html" data-tag="mysql" data-author>
+            <span class="post-title" title="sql实例">sql实例</span>
+            <span class="post-date" title="2019-05-31 11:06:07">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/40c1d23c.html" data-tag="chrome" data-author>
+            <span class="post-title" title="chrome开发者工具的小技巧">chrome开发者工具的小技巧</span>
+            <span class="post-date" title="2019-05-28 23:32:34">2019/05/28</span>
+        </a>
+        
+        <a class="工具 " href="/post/25c5187c.html" data-tag="cmder" data-author>
+            <span class="post-title" title="cmder使用">cmder使用</span>
+            <span class="post-date" title="2019-05-26 19:18:46">2019/05/26</span>
+        </a>
+        
+        <a class="工具 " href="/post/2d353c21.html" data-tag="git" data-author>
+            <span class="post-title" title="git子模块">git子模块</span>
+            <span class="post-date" title="2019-05-15 23:18:31">2019/05/15</span>
+        </a>
+        
+        <a class="工具 " href="/post/79626d9d.html" data-tag="android" data-author>
+            <span class="post-title" title="安卓开发环境搭建">安卓开发环境搭建</span>
+            <span class="post-date" title="2019-05-14 23:06:39">2019/05/14</span>
+        </a>
+        
+        <a class="工具 " href="/post/29ef2bf9.html" data-tag="gitBash" data-author>
+            <span class="post-title" title="windows的git bash设置永久别名">windows的git bash设置永久别名</span>
+            <span class="post-date" title="2019-05-12 18:44:01">2019/05/12</span>
+        </a>
+        
+        <a class="工具 " href="/post/a986cf0f.html" data-tag="phpStorm" data-author>
+            <span class="post-title" title="phpStorm快捷键">phpStorm快捷键</span>
+            <span class="post-date" title="2019-05-06 14:10:34">2019/05/06</span>
+        </a>
+        
+        <a class="工具 " href="/post/5d3f8823.html" data-tag="phpStorm" data-author>
+            <span class="post-title" title="phpstorm跳回快捷和windos屏幕旋转快捷冲突">phpstorm跳回快捷和windos屏幕旋转快捷冲突</span>
+            <span class="post-date" title="2019-04-20 17:58:26">2019/04/20</span>
+        </a>
+        
+        <a class="技术 " href="/post/6ed76400.html" data-tag="git" data-author>
+            <span class="post-title" title="git在push的时候自动更新">git在push的时候自动更新</span>
+            <span class="post-date" title="2019-04-20 12:37:18">2019/04/20</span>
+        </a>
+        
+        <a class="工具 " href="/post/e7ccc5c2.html" data-tag="gitBash" data-author>
+            <span class="post-title" title="gitBash 中文乱码">gitBash 中文乱码</span>
+            <span class="post-date" title="2019-04-18 18:49:11">2019/04/18</span>
+        </a>
+        
+        <a class="工具 " href="/post/aaf49e25.html" data-tag="docker" data-author>
+            <span class="post-title" title="docker指南">docker指南</span>
+            <span class="post-date" title="2019-04-10 16:28:57">2019/04/10</span>
+        </a>
+        
+        <a class="工具 " href="/post/94fe38d7.html" data-tag="yum" data-author>
+            <span class="post-title" title="yum常用命令">yum常用命令</span>
+            <span class="post-date" title="2019-04-10 11:16:48">2019/04/10</span>
+        </a>
+        
+        <a class="工具 " href="/post/f1dca051.html" data-tag="hexo" data-author>
+            <span class="post-title" title="HEXO SEO优化插件">HEXO SEO优化插件</span>
+            <span class="post-date" title="2019-04-04 10:25:00">2019/04/04</span>
+        </a>
+        
+        <a class="技术 " href="/post/30492970.html" data-tag="php" data-author>
+            <span class="post-title" title="php中的闭包和匿名函数">php中的闭包和匿名函数</span>
+            <span class="post-date" title="2019-04-03 11:17:09">2019/04/03</span>
+        </a>
+        
+        <a class="技术 " href="/post/3db89d5f.html" data-tag="php" data-author>
+            <span class="post-title" title="lavarel核心概念">lavarel核心概念</span>
+            <span class="post-date" title="2019-04-02 10:24:12">2019/04/02</span>
+        </a>
+        
+        <a class="工具 " href="/post/843cc845.html" data-tag="git" data-author>
+            <span class="post-title" title="gitignore文件">gitignore文件</span>
+            <span class="post-date" title="2019-03-29 15:54:44">2019/03/29</span>
+        </a>
+        
+        <a class="工具 " href="/post/925e341a.html" data-tag="git" data-author>
+            <span class="post-title" title="git配置">git配置</span>
+            <span class="post-date" title="2019-03-29 15:52:50">2019/03/29</span>
+        </a>
+        
+        <a class="工具 " href="/post/423abe9e.html" data-tag="git" data-author>
+            <span class="post-title" title="git常用命令">git常用命令</span>
+            <span class="post-date" title="2019-03-29 15:15:00">2019/03/29</span>
+        </a>
+        
+        <a class="工具 " href="/post/5a3fb175.html" data-tag="hexo" data-author>
+            <span class="post-title" title="hexo插件">hexo插件</span>
+            <span class="post-date" title="2019-03-28 22:51:53">2019/03/28</span>
+        </a>
+        
+        <a class="工具 " href="/post/26175.html" data-tag="linux" data-author>
+            <span class="post-title" title="liunx常用命令">liunx常用命令</span>
+            <span class="post-date" title="2019-03-28 21:39:50">2019/03/28</span>
+        </a>
+        
+        <a class="工具 " href="/post/38848.html" data-tag="chkConfig" data-author>
+            <span class="post-title" title="chkconfig服务管理说明">chkconfig服务管理说明</span>
+            <span class="post-date" title="2019-03-28 21:00:00">2019/03/28</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-tool/docker指南" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">docker指南</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="工具">工具</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color2">docker</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title="更新时间: 2020-01-19 08:55:21">2019-04-10 16:28</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#docker"><span class="toc-text">docker</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装ce社区版"><span class="toc-text">安装ce社区版</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装docker依赖包"><span class="toc-text">安装docker依赖包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加docker-ce的yum源"><span class="toc-text">添加docker-ce的yum源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关闭docker-ce的nightly版本和test版本"><span class="toc-text">关闭docker-ce的nightly版本和test版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新yum源"><span class="toc-text">更新yum源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看是否安装成功"><span class="toc-text">查看是否安装成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#加入开机启动项里"><span class="toc-text">加入开机启动项里</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#客户端操作"><span class="toc-text">客户端操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#镜像管理"><span class="toc-text">镜像管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#拉取镜像"><span class="toc-text">拉取镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看镜像"><span class="toc-text">查看镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除镜像"><span class="toc-text">删除镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建镜像"><span class="toc-text">创建镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#上传镜像"><span class="toc-text">上传镜像</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#容器管理"><span class="toc-text">容器管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#启动"><span class="toc-text">启动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#停止"><span class="toc-text">停止</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看容器"><span class="toc-text">查看容器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#重命名"><span class="toc-text">重命名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看容器的运行日志"><span class="toc-text">查看容器的运行日志</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除容器"><span class="toc-text">删除容器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#登录容器-类似ssh"><span class="toc-text">登录容器(类似ssh)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#挂载数据卷的容器"><span class="toc-text">挂载数据卷的容器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看挂载的信息"><span class="toc-text">查看挂载的信息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#仓库"><span class="toc-text">仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#公有仓库"><span class="toc-text">公有仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#搜索镜像"><span class="toc-text">搜索镜像</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#拉取镜像-1"><span class="toc-text">拉取镜像</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#登录dockerhub"><span class="toc-text">登录dockerhub</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#推送到共有仓库"><span class="toc-text">推送到共有仓库</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#私有仓库"><span class="toc-text">私有仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#启动registry服务"><span class="toc-text">启动registry服务</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#上传到私有仓库"><span class="toc-text">上传到私有仓库</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#从本地仓库下载镜像"><span class="toc-text">从本地仓库下载镜像</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查看仓库中已经上传的镜像"><span class="toc-text">查看仓库中已经上传的镜像</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#删除本地镜像"><span class="toc-text">删除本地镜像</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据卷"><span class="toc-text">数据卷</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#容器挂载"><span class="toc-text">容器挂载</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查看所有的数据卷"><span class="toc-text">查看所有的数据卷</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查看数据卷的详细信息"><span class="toc-text">查看数据卷的详细信息</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#docker网络"><span class="toc-text">docker网络</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#外部访问docker"><span class="toc-text">外部访问docker</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#容器间通信-容器互联"><span class="toc-text">容器间通信-容器互联</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务端"><span class="toc-text">服务端</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#responsity源设置"><span class="toc-text">responsity源设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动-1"><span class="toc-text">启动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dockerfile文件"><span class="toc-text">dockerfile文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#指令"><span class="toc-text">指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#FROM"><span class="toc-text">FROM</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MAINTAINER"><span class="toc-text">MAINTAINER</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ENV"><span class="toc-text">ENV</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ADD"><span class="toc-text">ADD</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#COPY"><span class="toc-text">COPY</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RUN"><span class="toc-text">RUN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EXPOSE"><span class="toc-text">EXPOSE</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ENTRYPOINT"><span class="toc-text">ENTRYPOINT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CMD"><span class="toc-text">CMD</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ONBUILD"><span class="toc-text">ONBUILD</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#VOLUME"><span class="toc-text">VOLUME</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker-compose"><span class="toc-text">docker-compose</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#docker-compose安装"><span class="toc-text">docker compose安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装epl软件源"><span class="toc-text">安装epl软件源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装python-pip"><span class="toc-text">安装python-pip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装docker-compose"><span class="toc-text">安装docker compose</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看docker-compse的版本"><span class="toc-text">查看docker compse的版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指令-1"><span class="toc-text">指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#启动-2"><span class="toc-text">启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看运行的容器"><span class="toc-text">查看运行的容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看compose文件含有的镜像"><span class="toc-text">查看compose文件含有的镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#停止项目中正在运行的容器"><span class="toc-text">停止项目中正在运行的容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除已经停止的容器"><span class="toc-text">删除已经停止的容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动compose项目中的容器"><span class="toc-text">启动compose项目中的容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指定项目中容器的启动数量"><span class="toc-text">指定项目中容器的启动数量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看项目中服务对应绑定的端口号"><span class="toc-text">查看项目中服务对应绑定的端口号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看项目中服务的日子信息"><span class="toc-text">查看项目中服务的日子信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Registry"><span class="toc-text">Registry</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#部署一个私有的docker-registry服务"><span class="toc-text">部署一个私有的docker registry服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#持续集成"><span class="toc-text">持续集成</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-6 i,
+    .toc-level-6 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h1><p>docker管理的对象是镜像是镜像和容器。</p>
+<h2 id="安装ce社区版"><a href="#安装ce社区版" class="headerlink" title="安装ce社区版"></a>安装ce社区版</h2><h3 id="安装docker依赖包"><a href="#安装docker依赖包" class="headerlink" title="安装docker依赖包"></a>安装docker依赖包</h3><pre><code class="bash">#yum-utils provides the yum-config-manager
+#device-mapper-persistent-data and lvm2 are required by the devicemapper storage driver
+yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+</code></pre>
+<h3 id="添加docker-ce的yum源"><a href="#添加docker-ce的yum源" class="headerlink" title="添加docker-ce的yum源"></a>添加docker-ce的yum源</h3><pre><code class="bash">#默认的镜像
+yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+
+#国内镜像最好使用aliyun    
+yum-config-manager \
+    --add-repo \
+    http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+</code></pre>
+<h3 id="关闭docker-ce的nightly版本和test版本"><a href="#关闭docker-ce的nightly版本和test版本" class="headerlink" title="关闭docker-ce的nightly版本和test版本"></a>关闭docker-ce的nightly版本和test版本</h3><p>默认就是disable这些版本，如果要开启的话执行下面两条语句</p>
+<pre><code class="bash">#测试版本
+yum-config-manager --enable  docker-ce-test
+
+#每晚一更新的版本
+yum-config-manager --enable  docker-ce-nightly
+</code></pre>
+<h3 id="更新yum源"><a href="#更新yum源" class="headerlink" title="更新yum源"></a>更新yum源</h3><p>上面添加源之后最好要更新下yum源缓存</p>
+<pre><code class="bash">yum makecache fast
+</code></pre>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code class="bash">yum install docker-ce -y
+</code></pre>
+<h3 id="查看是否安装成功"><a href="#查看是否安装成功" class="headerlink" title="查看是否安装成功"></a>查看是否安装成功</h3><pre><code class="bash">docker version
+</code></pre>
+<h3 id="加入开机启动项里"><a href="#加入开机启动项里" class="headerlink" title="加入开机启动项里"></a>加入开机启动项里</h3><pre><code class="bash">#docker安装完之后，默认是不会在开机启动项里的
+systemctl enable docker
+</code></pre>
+<h2 id="客户端操作"><a href="#客户端操作" class="headerlink" title="客户端操作"></a>客户端操作</h2><p>在客户端敲命令，然后将命令发送给服务端，服务端处理</p>
+<h3 id="镜像管理"><a href="#镜像管理" class="headerlink" title="镜像管理"></a>镜像管理</h3><h4 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h4><pre><code class="bash">#拉取ubuntu镜像
+docker pull ubuntu
+</code></pre>
+<h4 id="查看镜像"><a href="#查看镜像" class="headerlink" title="查看镜像"></a>查看镜像</h4><pre><code class="bash">#可以查看本地镜像id，镜像名，镜像创建时间，镜像大小
+docker image ls
+
+docker images
+</code></pre>
+<h4 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h4><pre><code class="bash">#删除一个镜像
+docker image rm -f 镜像id或镜像名或摘要
+
+#批量删除
+#比如，我们需要删除所有仓库名为 redis 的镜像
+docker image rm $(docker image ls -q redis)
+</code></pre>
+<h4 id="创建镜像"><a href="#创建镜像" class="headerlink" title="创建镜像"></a>创建镜像</h4><ul>
+<li><p>创建目录，是以目录为单位的</p>
+</li>
+<li><p>在目录里创建Dockerfile文件</p>
+</li>
+<li><p>构建镜像</p>
+<pre><code class="bash">#找基础镜像，如果本地如果有直接使用，没有去官方下载
+#目录中国需要一个dockerfile文件，从dockerfile创建镜像，用相对目录指定
+#-t 镜像的名称
+#在build的过程中，没执行一条dockerfile里的指令，就会生成一个layer，最后一个layer是由前面的layer组合而成；
+docker build -t wuqiyin/centos-nodejs-1 ./
+</code></pre>
+</li>
+</ul>
+<p><strong>注意：</strong>最完整的镜像命名格式是：<code>registory_url/namespace/镜像名称</code>，其中镜像名称：项目名称：版本号。例如：<code>registory_url:端口/namespace(其实就是目录)/centos:7.1</code>。registyr_url为本地镜像宿主机的地址</p>
+<h4 id="上传镜像"><a href="#上传镜像" class="headerlink" title="上传镜像"></a>上传镜像</h4><p>见仓库部分</p>
+<h3 id="容器管理"><a href="#容器管理" class="headerlink" title="容器管理"></a>容器管理</h3><h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><p>由docker镜像生成docker容器</p>
+<pre><code class="bash">#-P 22,容器随机生成一个宿主机的端口和容器的22端口映射，下次启动时候又变了
+#-p 2222:22,宿主机固定2222和和容器的22映射
+#--name base,给容器起名字base
+#-v host_dir:continer_dir，删除容器，不会删除宿主机的目录
+#--rm，在容器停止之后删除
+#--entrypoint=/bin/bash，该命令会替换dockerfile的ENTRYPOINT
+
+#常用命令
+#后台运行
+docker run -d -p 8080:8080 imageName:tag
+#前台运行
+docker run -it -p 8080:8080 imageName:tag
+#带有命令,注意命令替代掉Dockerfile里的Cmd命令
+docker run -it wuqiyin/cmd:0.1 /bin/bash
+</code></pre>
+<p>由停止状态的容器启动</p>
+<pre><code class="bash">#处于stop状态的
+docker start dockerId
+</code></pre>
+<h4 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h4><pre><code>docker stop dockerId
+</code></pre><h4 id="查看容器"><a href="#查看容器" class="headerlink" title="查看容器"></a>查看容器</h4><pre><code class="bash">#查看运行中的容器
+docker ps
+
+#-a查看所有
+docker ps -a --filter name=redis
+
+#查看所有已经创建的包括终止状态的容器
+docker container ls -a
+</code></pre>
+<h4 id="重命名"><a href="#重命名" class="headerlink" title="重命名"></a>重命名</h4><pre><code class="bash">#把redis 命名为 micro-service-redis 
+$ docker rename redis micro-service-redis 
+</code></pre>
+<h4 id="查看容器的运行日志"><a href="#查看容器的运行日志" class="headerlink" title="查看容器的运行日志"></a>查看容器的运行日志</h4><pre><code class="bash">docker logs -f 容器id
+</code></pre>
+<h4 id="删除容器"><a href="#删除容器" class="headerlink" title="删除容器"></a>删除容器</h4><pre><code class="bash">#删除一个处于终止状态的容器
+docker container rm 容器id
+
+#删除一个运行中的容器
+docker container -f rm 容器id
+
+#清理所有处于终止状态的容器
+docker container prune
+</code></pre>
+<h4 id="登录容器-类似ssh"><a href="#登录容器-类似ssh" class="headerlink" title="登录容器(类似ssh)"></a>登录容器(类似ssh)</h4><pre><code class="bash">docker exec -it 容器id bash(执行的命令)
+
+#退出
+exit
+</code></pre>
+<h4 id="挂载数据卷的容器"><a href="#挂载数据卷的容器" class="headerlink" title="挂载数据卷的容器"></a>挂载数据卷的容器</h4><pre><code class="bash">#把本地的目录，挂载到容器的目录下
+docker run -p 8080:8080 -d --mount source=my-vol,target=/webapp imageName:tag
+</code></pre>
+<h4 id="查看挂载的信息"><a href="#查看挂载的信息" class="headerlink" title="查看挂载的信息"></a>查看挂载的信息</h4><pre><code class="bash">docker inspect 容器id
+</code></pre>
+<h3 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h3><h4 id="公有仓库"><a href="#公有仓库" class="headerlink" title="公有仓库"></a>公有仓库</h4><h5 id="搜索镜像"><a href="#搜索镜像" class="headerlink" title="搜索镜像"></a>搜索镜像</h5><pre><code class="bash">#例如搜索centos
+docker search centos
+</code></pre>
+<h5 id="拉取镜像-1"><a href="#拉取镜像-1" class="headerlink" title="拉取镜像"></a>拉取镜像</h5><pre><code class="bash">#例如拉取ubuntu
+docker pull ubuntu
+</code></pre>
+<h5 id="登录dockerhub"><a href="#登录dockerhub" class="headerlink" title="登录dockerhub"></a>登录dockerhub</h5><pre><code class="bash">docker login
+</code></pre>
+<h5 id="推送到共有仓库"><a href="#推送到共有仓库" class="headerlink" title="推送到共有仓库"></a>推送到共有仓库</h5><ul>
+<li><p>给镜像打标签</p>
+<pre><code class="bash">docker tag centos-node.js:1.0 wuqiyin/centos-nodejs:1.0
+</code></pre>
+</li>
+<li><p>查看打好标签的本地镜像</p>
+<pre><code class="bash">docker image ls
+</code></pre>
+</li>
+<li><p>上传到docker官方镜像仓库</p>
+<pre><code class="bash">docker push wuqiyin/centos-nodejs
+</code></pre>
+</li>
+<li><p>查看是否上传成功</p>
+<pre><code class="bash">#搜索查看是否存在
+docker search wuqiyin
+</code></pre>
+</li>
+</ul>
+<h4 id="私有仓库"><a href="#私有仓库" class="headerlink" title="私有仓库"></a>私有仓库</h4><h5 id="启动registry服务"><a href="#启动registry服务" class="headerlink" title="启动registry服务"></a>启动registry服务</h5><p>默认情况下，会将仓库存放于容器的<code>/tmp/registry</code>（还是说在/var/lib/registry？有待考证！！）目录下，这样如果容器被删除，则存放于容器中的镜像也会丢失，所以我们一般情况下会指定本地一个目录挂载到容器的/tmp/registry下</p>
+<pre><code class="bash">#官方提供的registry服务
+docker run -d 5000:5000 -v /opt/data/registry:/var/lib/registry registry
+</code></pre>
+<h5 id="上传到私有仓库"><a href="#上传到私有仓库" class="headerlink" title="上传到私有仓库"></a>上传到私有仓库</h5><ul>
+<li><p>标记镜像到私有仓库</p>
+<pre><code class="bash">#tag镜像为私有仓库ip：port，不打tag，push不知道目标ip和端口
+$ docker tag ubuntu:lastest 127.0.0.1:5000/centos-nodejs:1.0
+</code></pre>
+</li>
+<li><p>上传到私有仓库</p>
+<pre><code class="bash">$ docker push 127.0.0.1:5000/centos-nodejs:1.0
+</code></pre>
+<p>push报错: <code>http: server gave HTTP response to HTTPS client</code>，修改push的HTTPS要求即可，如下</p>
+<pre><code class="bash">[root@c1awn01 ~]# vim /etc/docker//daemon.json
+{
+    &quot;registry-mirrors&quot;: [
+        &quot;http://9686e306.m.daocloud.io&quot;
+    ],
+    &quot;insecure-registries&quot;: [ &quot;192.168.80.129:5000&quot; ] #增加这个，然后重启docker即可
+}
+</code></pre>
+</li>
+<li><p>查看镜像</p>
+<pre><code class="bash">$ curl 127.0.0.1:5000/v2/_catalog
+</code></pre>
+</li>
+</ul>
+<h5 id="从本地仓库下载镜像"><a href="#从本地仓库下载镜像" class="headerlink" title="从本地仓库下载镜像"></a>从本地仓库下载镜像</h5><pre><code class="bash">docker pull 127.0.0.1:5000/centos-nodejs:1.0
+</code></pre>
+<h5 id="查看仓库中已经上传的镜像"><a href="#查看仓库中已经上传的镜像" class="headerlink" title="查看仓库中已经上传的镜像"></a>查看仓库中已经上传的镜像</h5><pre><code>curl 127.0.0.1:5000/v2/_catalog
+</code></pre><h5 id="删除本地镜像"><a href="#删除本地镜像" class="headerlink" title="删除本地镜像"></a>删除本地镜像</h5><pre><code>docker image rm 127.0.0.1:5000/centos-nodejs:1.0
+</code></pre><h4 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h4><h5 id="容器挂载"><a href="#容器挂载" class="headerlink" title="容器挂载"></a>容器挂载</h5><pre><code class="bash">#把本地的目录，挂载到容器的目录下
+docker run -p 8080:8080 -d --mount source=my-vol,target=/webapp imageName:tag
+</code></pre>
+<h5 id="查看所有的数据卷"><a href="#查看所有的数据卷" class="headerlink" title="查看所有的数据卷"></a>查看所有的数据卷</h5><pre><code class="bash">docker volume ls
+</code></pre>
+<h5 id="查看数据卷的详细信息"><a href="#查看数据卷的详细信息" class="headerlink" title="查看数据卷的详细信息"></a>查看数据卷的详细信息</h5><pre><code class="bash">docker volume inspect my-vol
+
+#在容器的信息里查看挂载信息
+docker inspect 容器id
+</code></pre>
+<h4 id="docker网络"><a href="#docker网络" class="headerlink" title="docker网络"></a>docker网络</h4><h5 id="外部访问docker"><a href="#外部访问docker" class="headerlink" title="外部访问docker"></a>外部访问docker</h5><ul>
+<li><p>端口映射任意的地址</p>
+<pre><code class="bash">#所有ip都可以访问该端口
+-p 8080:8080
+</code></pre>
+</li>
+<li><p>映射本机指定地址的指定端口</p>
+<pre><code class="bash">#只有宿主主机本身可以访问该端口
+#参数：-p 127.0.0.1:8080:8080
+#例如
+docker run -p 127.0.0.1:8080:8080 -d centos-nodejs:1.0
+</code></pre>
+</li>
+<li><p>映射到主机地址的任意端口</p>
+<pre><code class="bash">#参数 -p 127.0.0.0::8080
+#例如
+docker run -p 127.0.0.0::8080 -d centos-nodejs:1.0
+</code></pre>
+</li>
+<li><p>查看端口信息</p>
+<pre><code class="bash">docker port 容器id 8080（端口号）
+</code></pre>
+</li>
+</ul>
+<h5 id="容器间通信-容器互联"><a href="#容器间通信-容器互联" class="headerlink" title="容器间通信-容器互联"></a>容器间通信-容器互联</h5><p>docker在启动的时候，会自动在主机上创建一个docker0的虚拟网桥，实际上是linux的一个bridge，可以理解为是一个软件交换机。它会在挂载到它的网口之间进行转发。</p>
+<p><img src="../../images/1556773503070.png" alt="1556773503070"></p>
+<ul>
+<li><p>创建一个自己的虚拟网桥</p>
+<pre><code class="bash">docker network create -d bridge my-bridge（网桥起个名字）
+</code></pre>
+</li>
+<li><p>创建两个链接到新网桥的两个容器</p>
+<pre><code class="bash"># --name 给容器启一个名字
+# --newwork 容器的网络使用我们自己创建的网桥
+# -it 交互模式启动，启动之后会进入容器
+# centos 镜像名字
+docker run -it --name test5 --network my-bridge centos
+
+docker run -it --name test6 --network my-bridge centos
+</code></pre>
+</li>
+</ul>
+<h2 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h2><h3 id="responsity源设置"><a href="#responsity源设置" class="headerlink" title="responsity源设置"></a>responsity源设置</h3><ul>
+<li>打开网站<a href="https://www.daocloud.io/mirror" rel="external nofollow noopener noreferrer" target="_blank">https://www.daocloud.io/mirror</a>，里面有教程</li>
+<li>执行命令<code>curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io</code></li>
+<li>如果已经启动要重启docker</li>
+</ul>
+<h3 id="启动-1"><a href="#启动-1" class="headerlink" title="启动"></a>启动</h3><pre><code class="bash">systemctl start docker
+</code></pre>
+<h2 id="dockerfile文件"><a href="#dockerfile文件" class="headerlink" title="dockerfile文件"></a>dockerfile文件</h2><h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><h4 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h4><pre><code class="bash">#指定父镜像(from)
+FROM centos:centos7.1.1503
+</code></pre>
+<h4 id="MAINTAINER"><a href="#MAINTAINER" class="headerlink" title="MAINTAINER"></a>MAINTAINER</h4><pre><code class="bash">#maintainer
+#维护者，是谁来维护的
+MAINTAINER 名字 &lt;邮件地址&gt;
+</code></pre>
+<h4 id="ENV"><a href="#ENV" class="headerlink" title="ENV"></a>ENV</h4><pre><code class="bash">#env
+#设置环境变量，在dockerfile中可以写多个
+
+#时区
+ENV TZ &quot;Asia/Shanghai&quot;
+
+#终端模拟器xterm
+ENV TERM xterm
+</code></pre>
+<h4 id="ADD"><a href="#ADD" class="headerlink" title="ADD"></a>ADD</h4><pre><code class="bash">#可以把链接地址或者本地文件复制到container里面
+#把压缩包复制到container的时候，自动解压
+ADD aliyun-mirror.repo /etc/yum.repos.d/CentOS-Base.repo
+</code></pre>
+<h4 id="COPY"><a href="#COPY" class="headerlink" title="COPY"></a>COPY</h4><pre><code class="bash">#只能把本地文件copy到container里面，并且不能自动解压
+ADD aliyun-mirror.repo /etc/yum.repos.d/CentOS-Base.repo
+</code></pre>
+<h4 id="RUN"><a href="#RUN" class="headerlink" title="RUN"></a>RUN</h4><pre><code class="bash">#执行shell脚本命令
+RUN yum install -y curl wget tar bzip2 unzip vim-enhanced passwd sudo yum-utils hostname net-tools rsync man &amp;&amp; \
+    yum install -y gcc gcc-c++ git make automake cmake patch logrotate python-devel libpng-devel libjpeg-devel &amp;&amp; \
+    yum install -y --enablerepo=epel pwgen python-pip &amp;&amp; \
+    yum clean all
+</code></pre>
+<h4 id="EXPOSE"><a href="#EXPOSE" class="headerlink" title="EXPOSE"></a>EXPOSE</h4><pre><code class="bash">#容器开放端口，给外部连接使用
+EXPOSE 22
+EXPOSE 80 443
+</code></pre>
+<h4 id="ENTRYPOINT"><a href="#ENTRYPOINT" class="headerlink" title="ENTRYPOINT"></a>ENTRYPOINT</h4><pre><code class="bash">#entrypoint，一个dockerfile里只有最后一个生效
+#container每次启动的时候执行该命令
+#数组的格式，进程启动起来pid就唯一
+ENTRYPOINT [&quot;/usr/bin/supervisord&quot;, &quot;-n&quot;, &quot;-c&quot;, &quot;/etc/supervisord.conf&quot;]
+
+#命令模式,pid为shell的id
+ENTRYPOINT command param1 param2 
+</code></pre>
+<p>注意：<code>docker run -it entrypoint =</code>会覆盖dockerfile里的entrypoint，如果只是简单的执行命令则不会被替换，如<code>docker run -it /bin/bash</code>，中的<code>/bin/bash</code>命令</p>
+<h4 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h4><pre><code class="bash">#数组格式
+CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;]
+
+#为entrypoint提供一个默认的参数，/usr/bin/nginx param1 param2
+CMD [&quot;param1&quot;,&quot;param2&quot;]
+
+#pid号是shell的pid号
+CMD command param1 param2 param3
+</code></pre>
+<p><strong>注意：</strong><code>docker run 命令</code>，该<code>命令</code>会替换掉dockerfile里的cmd命令。</p>
+<h4 id="ONBUILD"><a href="#ONBUILD" class="headerlink" title="ONBUILD"></a>ONBUILD</h4><pre><code class="bash">#build本dockerfile的镜像的时候不生效，在其它镜像FROM这个镜像的时候生效
+ONBUILD ADD . /app
+</code></pre>
+<h4 id="VOLUME"><a href="#VOLUME" class="headerlink" title="VOLUME"></a>VOLUME</h4><pre><code class="bash">#数据卷映射到宿主机
+#声明之后就可以在docker run中使用-v hots_dir:/var/lib/mysql启动容器
+VOLUME [&quot;/var/lib/mysql&quot;]
+</code></pre>
+<h1 id="docker-compose"><a href="#docker-compose" class="headerlink" title="docker-compose"></a>docker-compose</h1><p>管理的对象是项目，根据docker-compose.yml将多个服务（即容器）构建一个项目。</p>
+<h2 id="docker-compose安装"><a href="#docker-compose安装" class="headerlink" title="docker compose安装"></a>docker compose安装</h2><h3 id="安装epl软件源"><a href="#安装epl软件源" class="headerlink" title="安装epl软件源"></a>安装epl软件源</h3><pre><code class="bash">yum install -y epel-release
+</code></pre>
+<h3 id="安装python-pip"><a href="#安装python-pip" class="headerlink" title="安装python-pip"></a>安装python-pip</h3><pre><code class="bash">yum install -y python-pip
+</code></pre>
+<h3 id="安装docker-compose"><a href="#安装docker-compose" class="headerlink" title="安装docker compose"></a>安装docker compose</h3><pre><code class="bash">pip install docker-compose
+</code></pre>
+<h3 id="查看docker-compse的版本"><a href="#查看docker-compse的版本" class="headerlink" title="查看docker compse的版本"></a>查看docker compse的版本</h3><pre><code class="bash">docker-compose version
+</code></pre>
+<h2 id="指令-1"><a href="#指令-1" class="headerlink" title="指令"></a>指令</h2><h3 id="启动-2"><a href="#启动-2" class="headerlink" title="启动"></a>启动</h3><pre><code class="bash">#后台的方式启动
+docker-compose up -d
+</code></pre>
+<h3 id="查看运行的容器"><a href="#查看运行的容器" class="headerlink" title="查看运行的容器"></a>查看运行的容器</h3><pre><code class="bash">docker-compose ps
+</code></pre>
+<h3 id="查看compose文件含有的镜像"><a href="#查看compose文件含有的镜像" class="headerlink" title="查看compose文件含有的镜像"></a>查看compose文件含有的镜像</h3><pre><code class="bash">docker-compose images
+</code></pre>
+<h3 id="停止项目中正在运行的容器"><a href="#停止项目中正在运行的容器" class="headerlink" title="停止项目中正在运行的容器"></a>停止项目中正在运行的容器</h3><pre><code class="bash">docker-compose stop
+</code></pre>
+<h3 id="删除已经停止的容器"><a href="#删除已经停止的容器" class="headerlink" title="删除已经停止的容器"></a>删除已经停止的容器</h3><pre><code class="bash">docker-compose rm
+</code></pre>
+<h3 id="启动compose项目中的容器"><a href="#启动compose项目中的容器" class="headerlink" title="启动compose项目中的容器"></a>启动compose项目中的容器</h3><pre><code class="bash">docker-compose start
+</code></pre>
+<h3 id="指定项目中容器的启动数量"><a href="#指定项目中容器的启动数量" class="headerlink" title="指定项目中容器的启动数量"></a>指定项目中容器的启动数量</h3><pre><code class="bash">#wordpress 启动3个，db启动2个
+docker-compose scale worpress=3 db=2
+</code></pre>
+<h3 id="查看项目中服务对应绑定的端口号"><a href="#查看项目中服务对应绑定的端口号" class="headerlink" title="查看项目中服务对应绑定的端口号"></a>查看项目中服务对应绑定的端口号</h3><pre><code class="bash">docker-compose port wordpress 80
+</code></pre>
+<h3 id="查看项目中服务的日子信息"><a href="#查看项目中服务的日子信息" class="headerlink" title="查看项目中服务的日子信息"></a>查看项目中服务的日子信息</h3><pre><code class="bash">docker-compose logs -f wordpress
+</code></pre>
+<h2 id="Registry"><a href="#Registry" class="headerlink" title="Registry"></a>Registry</h2><p>该镜像容器可以将本地的镜像上传到私有的仓库上面；</p>
+<h3 id="部署一个私有的docker-registry服务"><a href="#部署一个私有的docker-registry服务" class="headerlink" title="部署一个私有的docker registry服务"></a>部署一个私有的docker registry服务</h3><h2 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h2><p><strong>集成</strong>是指软件个人研发的部分向软件整体部分交付，以便尽早发现个人开发部分的问题；<br><strong>部署</strong>是代码尽快向可运行的开发/测试节交付，以便尽早测试；<br><strong>交付</strong>是指研发尽快向客户交付，以便尽早发现生产环境中存在的问题。<br>如果说等到所有东西都完成了才向下个环节交付，导致所有的问题只能再最后才爆发出来，解决成本巨大甚至无法解决。<br>而所谓的<strong>持续</strong>，就是说每完成一个完整的部分，就向下个环节交付，发现问题可以马上调整。是的问题不会放大到其他部分和后面的环节。</p>
+<p>这种做法的核心思想在于：既然事实上难以做到事先完全了解完整的、正确的需求，那么就干脆一小块一小块的做，并且加快交付的速度和频率，使得交付物尽早在下个环节得到验证。早发现问题早返工。</p>
+<p>举个例子，你家装修厨房，其中一项是铺地砖，边角地砖要切割大小。如果一次全切割完再铺上去，发现尺寸有误的话浪费和返工时间就大了，不如切一块铺一块。这就是持续集成。</p>
+<p>装修厨房有很多部分，每个部分都有检测手段，如地砖铺完了要测试漏水与否，线路铺完了要通电测试电路通顺，水管装好了也要测试冷水热水。如果全部装完了再测，出现问题可能会互相影响，比如电路不行可能要把地砖给挖开……。那么每完成一部分就测试，这是持续部署。</p>
+<p>全部装修完了，你去验收，发现地砖颜色不合意，水池太小，灶台位置不对，返工吗？所以不如没完成一部分，你就去用一下试用验收，这就是持续交付。</p>
+<p>-——————-</p>
+<p>补充：从敏捷思想中提出的这三个观点，还强调一件事：通过技术手段自动化这三个工作。加快交付速度。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>docker指南</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="silver@wq">silver@wq</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-04-10, 16:28:57</p>
+    <p><span class="copy-title">最后更新:</span>2020-01-19, 08:55:21</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/post/aaf49e25.html" title="docker指南">http://blog.silverwq.top/post/aaf49e25.html</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2019 Silverwq</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="/js/script.js?v=1.0.1"></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#规范','#快捷键','#elasticSearch','#php','#go','#http','#laradock','#mysql','#ssh','#thinkPhp','#virtualBox','#yii','#android','#chkConfig','#cmder','#chrome','#crontab','#ditto','#gitBash','#cmd','#docker','#git','#hexo','#listary','#linux','#memcached','#navicat','#nginx','#phpStorm','#sublime','#vagrant','#vim','#windows','#yum',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out">
+
+</div>
+<div class="mobile-menus">
+    
+    
+    
+    
+    <a class="dynamic-menu " target="_blank" href="https://github.com/wuqiyin" rel="external nofollow noopener noreferrer">github</a>
+    
+</div>
+
+
+</html>

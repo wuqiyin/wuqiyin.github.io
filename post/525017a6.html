@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>tp3.2使用心得 | silver@wq</title>
+  <meta name="keywords" content=" thinkPhp ">
+  <meta name="description" content="tp3.2使用心得 | silver@wq">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="记录一些程序设计灵感，以及程序设计领域相关的概念和问题">
+<meta name="keywords" content="silver@wq,php,js,javascript,phpstorm,english,git,windos7,yii,sql,mysql,linux,浏览器,程序设计">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://blog.silverwq.top/about/index.html">
+<meta property="og:site_name" content="silver@wq">
+<meta property="og:description" content="记录一些程序设计灵感，以及程序设计领域相关的概念和问题">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-01-19T00:55:21.463Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="about">
+<meta name="twitter:description" content="记录一些程序设计灵感，以及程序设计领域相关的概念和问题">
+
+
+<link rel="icon" href="/img/favicon-16x16.png">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/sublime.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/profile.png">
+</a>
+<div class="author">
+    <span>silver@wq</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="rss" href="/atom.xml" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-rss"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="github" href="https://github.com/wuqiyin" target="_blank" rel="external nofollow noopener noreferrer">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:silverwq@qq.com" target="_blank" rel="external nofollow noopener noreferrer">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=925662696&site=qq&menu=yes" target="_blank" rel="external nofollow noopener noreferrer">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="kugou" href="https://www.kugou.com/" target="_blank" rel="external nofollow noopener noreferrer">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-kugou"/>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+</div>
+
+
+
+<a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(63)</small></div></li>
+    
+        
+            
+            <li><div data-rel="其它">其它<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="技术">技术<small>(21)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="工具">工具<small>(40)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    <a class="dynamic-menu " target="_blank" href="https://github.com/wuqiyin" rel="external nofollow noopener noreferrer">github</a>
+    
+    </div>
+    <div><a style="border-right: 1px solid #fff; width: 49%" class="about site_url" href="/about">关于</a><a style="width: 50%" class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="63">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off" id="local-search-input">
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none">
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">规范</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">快捷键</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">elasticSearch</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">php</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">go</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">http</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">laradock</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">mysql</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">ssh</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">thinkPhp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">virtualBox</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">yii</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">android</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">chkConfig</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">cmder</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">chrome</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">crontab</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">ditto</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">gitBash</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cmd</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">git</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">listary</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">linux</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">memcached</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">navicat</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">nginx</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">phpStorm</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">sublime</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">vagrant</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">vim</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">windows</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">yum</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="其它 " href="/post/bbbae7cf.html" data-tag="快捷键" data-author>
+            <span class="post-title" title="快捷键说明">快捷键说明</span>
+            <span class="post-date" title="2020-01-22 15:30:55">2020/01/22</span>
+        </a>
+        
+        <a id="top" class="其它 " href="/post/15159e71.html" data-tag="规范" data-author>
+            <span class="post-title" title="写作规范">写作规范</span>
+            <span class="post-date" title="2020-01-18 13:30:39">2020/01/18</span>
+        </a>
+        
+        <a id="top" class="工具 " href="/post/65edf23c.html" data-tag="cmd" data-author>
+            <span class="post-title" title="cmd常用命令">cmd常用命令</span>
+            <span class="post-date" title="2019-05-31 23:00:44">2019/05/31</span>
+        </a>
+        
+        <a class="技术 " href="/post/525017a6.html" data-tag="thinkPhp" data-author>
+            <span class="post-title" title="tp3.2使用心得">tp3.2使用心得</span>
+            <span class="post-date" title="2019-10-15 13:44:48">2019/10/15</span>
+        </a>
+        
+        <a class="技术 " href="/post/a867c080.html" data-tag="http" data-author>
+            <span class="post-title" title="http技术">http技术</span>
+            <span class="post-date" title="2019-10-09 14:38:26">2019/10/09</span>
+        </a>
+        
+        <a class="技术 " href="/post/dc4896e1.html" data-tag="mysql" data-author>
+            <span class="post-title" title="mysql高性能优化">mysql高性能优化</span>
+            <span class="post-date" title="2019-10-05 14:17:03">2019/10/05</span>
+        </a>
+        
+        <a class="技术 " href="/post/1311505c.html" data-tag="php" data-author>
+            <span class="post-title" title="php开发">php开发</span>
+            <span class="post-date" title="2019-09-29 13:52:37">2019/09/29</span>
+        </a>
+        
+        <a class="技术 " href="/post/f4bf1653.html" data-tag="ssh" data-author>
+            <span class="post-title" title="ssh使用">ssh使用</span>
+            <span class="post-date" title="2019-09-29 13:03:57">2019/09/29</span>
+        </a>
+        
+        <a class="技术 " href="/post/8c17f486.html" data-tag="laradock" data-author>
+            <span class="post-title" title="LaraDock新手使用教程">LaraDock新手使用教程</span>
+            <span class="post-date" title="2019-09-13 10:01:04">2019/09/13</span>
+        </a>
+        
+        <a class="技术 " href="/post/4949a8f8.html" data-tag="virtualBox" data-author>
+            <span class="post-title" title="virtualBox安装centos7.2">virtualBox安装centos7.2</span>
+            <span class="post-date" title="2019-09-07 11:24:34">2019/09/07</span>
+        </a>
+        
+        <a class="技术 " href="/post/6a51fa6.html" data-tag="elasticSearch" data-author>
+            <span class="post-title" title="elasticSearch顶尖高手系列-快速入门篇">elasticSearch顶尖高手系列-快速入门篇</span>
+            <span class="post-date" title="2019-08-25 17:52:44">2019/08/25</span>
+        </a>
+        
+        <a class="技术 " href="/post/a347551a.html" data-tag="go" data-author>
+            <span class="post-title" title="go语言基础教程">go语言基础教程</span>
+            <span class="post-date" title="2019-08-14 21:17:25">2019/08/14</span>
+        </a>
+        
+        <a class="技术 " href="/post/2d7a763a.html" data-tag="php" data-author>
+            <span class="post-title" title="phpSpreadsheet使用">phpSpreadsheet使用</span>
+            <span class="post-date" title="2019-08-06 22:12:55">2019/08/06</span>
+        </a>
+        
+        <a class="技术 " href="/post/bfdcff9a.html" data-tag="php" data-author>
+            <span class="post-title" title="php递归树形结构">php递归树形结构</span>
+            <span class="post-date" title="2019-06-14 13:55:28">2019/06/14</span>
+        </a>
+        
+        <a class="技术 " href="/post/7abb40af.html" data-tag="php" data-author>
+            <span class="post-title" title="php数组-实例.md">php数组-实例.md</span>
+            <span class="post-date" title="2019-06-05 21:29:43">2019/06/05</span>
+        </a>
+        
+        <a class="工具 " href="/post/2b279d40.html" data-tag="listary" data-author>
+            <span class="post-title" title="listary使用">listary使用</span>
+            <span class="post-date" title="2019-06-02 22:28:56">2019/06/02</span>
+        </a>
+        
+        <a class="工具 " href="/post/1fcd234f.html" data-tag="ditto" data-author>
+            <span class="post-title" title="ditto使用">ditto使用</span>
+            <span class="post-date" title="2019-06-02 21:00:53">2019/06/02</span>
+        </a>
+        
+        <a class="工具 " href="/post/238c95be.html" data-tag="sublime" data-author>
+            <span class="post-title" title="sublime">sublime</span>
+            <span class="post-date" title="2019-06-01 10:36:04">2019/06/01</span>
+        </a>
+        
+        <a class="技术 " href="/post/987306d8.html" data-tag="php" data-author>
+            <span class="post-title" title="composer">composer</span>
+            <span class="post-date" title="2019-06-01 10:33:55">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/25312b9b.html" data-tag="php" data-author>
+            <span class="post-title" title="php7.2.3编译安装">php7.2.3编译安装</span>
+            <span class="post-date" title="2019-06-01 10:32:51">2019/06/01</span>
+        </a>
+        
+        <a class="技术 " href="/post/37c4afc8.html" data-tag="yii" data-author>
+            <span class="post-title" title="yii-模型">yii-模型</span>
+            <span class="post-date" title="2019-06-01 10:31:39">2019/06/01</span>
+        </a>
+        
+        <a class="技术 " href="/post/b98e5f11.html" data-tag="mysql" data-author>
+            <span class="post-title" title="深入理解sql子句">深入理解sql子句</span>
+            <span class="post-date" title="2019-06-01 10:29:53">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/3bf849ad.html" data-tag="phpStorm" data-author>
+            <span class="post-title" title="phpstorm插件">phpstorm插件</span>
+            <span class="post-date" title="2019-06-01 10:18:11">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/63323c.html" data-tag="phpStorm" data-author>
+            <span class="post-title" title="phpStorm常用设置">phpStorm常用设置</span>
+            <span class="post-date" title="2019-06-01 10:16:17">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/d4ee0365.html" data-tag="navicat" data-author>
+            <span class="post-title" title="navicat">navicat</span>
+            <span class="post-date" title="2019-06-01 10:14:54">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/eb3635c.html" data-tag="php" data-author>
+            <span class="post-title" title="pecl">pecl</span>
+            <span class="post-date" title="2019-06-01 10:13:41">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/191b2c68.html" data-tag="php" data-author>
+            <span class="post-title" title="php-fpm管理php进程">php-fpm管理php进程</span>
+            <span class="post-date" title="2019-06-01 10:12:39">2019/06/01</span>
+        </a>
+        
+        <a class="技术 " href="/post/f3e09151.html" data-tag="php" data-author>
+            <span class="post-title" title="php安装扩展">php安装扩展</span>
+            <span class="post-date" title="2019-06-01 10:11:41">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/f713c4e6.html" data-tag="windows" data-author>
+            <span class="post-title" title="window10常用快捷键">window10常用快捷键</span>
+            <span class="post-date" title="2019-06-01 10:08:35">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/f118c972.html" data-tag="windows" data-author>
+            <span class="post-title" title="windows7旗舰版系统重装">windows7旗舰版系统重装</span>
+            <span class="post-date" title="2019-06-01 09:57:42">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/9407bf68.html" data-tag="crontab" data-author>
+            <span class="post-title" title="crontab使用">crontab使用</span>
+            <span class="post-date" title="2019-06-01 09:49:49">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/7a8b8960.html" data-tag="memcached" data-author>
+            <span class="post-title" title="memcached安装">memcached安装</span>
+            <span class="post-date" title="2019-06-01 09:44:51">2019/06/01</span>
+        </a>
+        
+        <a class="工具 " href="/post/303cf186.html" data-tag="nginx" data-author>
+            <span class="post-title" title="nginx常见问题">nginx常见问题</span>
+            <span class="post-date" title="2019-05-31 23:41:44">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/5329de73.html" data-tag="vagrant" data-author>
+            <span class="post-title" title="vagrant管理">vagrant管理</span>
+            <span class="post-date" title="2019-05-31 23:39:20">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/16fe430b.html" data-tag="nginx" data-author>
+            <span class="post-title" title="nginx安装">nginx安装</span>
+            <span class="post-date" title="2019-05-31 23:28:12">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/b7b4a211.html" data-tag="vagrant" data-author>
+            <span class="post-title" title="vagrant环境搭建">vagrant环境搭建</span>
+            <span class="post-date" title="2019-05-31 23:24:10">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/1f1783ef.html" data-tag="mysql" data-author>
+            <span class="post-title" title="mysql5.6.38安装">mysql5.6.38安装</span>
+            <span class="post-date" title="2019-05-31 23:20:42">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/e7de59c5.html" data-tag="mysql" data-author>
+            <span class="post-title" title="mysql的ddl">mysql的ddl</span>
+            <span class="post-date" title="2019-05-31 23:18:05">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/8c31560b.html" data-tag="vim" data-author>
+            <span class="post-title" title="vim常用命令">vim常用命令</span>
+            <span class="post-date" title="2019-05-31 23:06:27">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/4ab1a8de.html" data-tag="mysql" data-author>
+            <span class="post-title" title="mysql常用命令">mysql常用命令</span>
+            <span class="post-date" title="2019-05-31 23:04:32">2019/05/31</span>
+        </a>
+        
+        <a class="技术 " href="/post/edbab175.html" data-tag="php" data-author>
+            <span class="post-title" title="php数组-使用说明">php数组-使用说明</span>
+            <span class="post-date" title="2019-05-31 16:22:33">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/b8b76378.html" data-tag="nginx" data-author>
+            <span class="post-title" title="nginx配置访问密码">nginx配置访问密码</span>
+            <span class="post-date" title="2019-05-31 15:55:57">2019/05/31</span>
+        </a>
+        
+        <a class="技术 " href="/post/790dc092.html" data-tag="mysql" data-author>
+            <span class="post-title" title="sql实例">sql实例</span>
+            <span class="post-date" title="2019-05-31 11:06:07">2019/05/31</span>
+        </a>
+        
+        <a class="工具 " href="/post/40c1d23c.html" data-tag="chrome" data-author>
+            <span class="post-title" title="chrome开发者工具的小技巧">chrome开发者工具的小技巧</span>
+            <span class="post-date" title="2019-05-28 23:32:34">2019/05/28</span>
+        </a>
+        
+        <a class="工具 " href="/post/25c5187c.html" data-tag="cmder" data-author>
+            <span class="post-title" title="cmder使用">cmder使用</span>
+            <span class="post-date" title="2019-05-26 19:18:46">2019/05/26</span>
+        </a>
+        
+        <a class="工具 " href="/post/2d353c21.html" data-tag="git" data-author>
+            <span class="post-title" title="git子模块">git子模块</span>
+            <span class="post-date" title="2019-05-15 23:18:31">2019/05/15</span>
+        </a>
+        
+        <a class="工具 " href="/post/79626d9d.html" data-tag="android" data-author>
+            <span class="post-title" title="安卓开发环境搭建">安卓开发环境搭建</span>
+            <span class="post-date" title="2019-05-14 23:06:39">2019/05/14</span>
+        </a>
+        
+        <a class="工具 " href="/post/29ef2bf9.html" data-tag="gitBash" data-author>
+            <span class="post-title" title="windows的git bash设置永久别名">windows的git bash设置永久别名</span>
+            <span class="post-date" title="2019-05-12 18:44:01">2019/05/12</span>
+        </a>
+        
+        <a class="工具 " href="/post/a986cf0f.html" data-tag="phpStorm" data-author>
+            <span class="post-title" title="phpStorm快捷键">phpStorm快捷键</span>
+            <span class="post-date" title="2019-05-06 14:10:34">2019/05/06</span>
+        </a>
+        
+        <a class="工具 " href="/post/5d3f8823.html" data-tag="phpStorm" data-author>
+            <span class="post-title" title="phpstorm跳回快捷和windos屏幕旋转快捷冲突">phpstorm跳回快捷和windos屏幕旋转快捷冲突</span>
+            <span class="post-date" title="2019-04-20 17:58:26">2019/04/20</span>
+        </a>
+        
+        <a class="技术 " href="/post/6ed76400.html" data-tag="git" data-author>
+            <span class="post-title" title="git在push的时候自动更新">git在push的时候自动更新</span>
+            <span class="post-date" title="2019-04-20 12:37:18">2019/04/20</span>
+        </a>
+        
+        <a class="工具 " href="/post/e7ccc5c2.html" data-tag="gitBash" data-author>
+            <span class="post-title" title="gitBash 中文乱码">gitBash 中文乱码</span>
+            <span class="post-date" title="2019-04-18 18:49:11">2019/04/18</span>
+        </a>
+        
+        <a class="工具 " href="/post/aaf49e25.html" data-tag="docker" data-author>
+            <span class="post-title" title="docker指南">docker指南</span>
+            <span class="post-date" title="2019-04-10 16:28:57">2019/04/10</span>
+        </a>
+        
+        <a class="工具 " href="/post/94fe38d7.html" data-tag="yum" data-author>
+            <span class="post-title" title="yum常用命令">yum常用命令</span>
+            <span class="post-date" title="2019-04-10 11:16:48">2019/04/10</span>
+        </a>
+        
+        <a class="工具 " href="/post/f1dca051.html" data-tag="hexo" data-author>
+            <span class="post-title" title="HEXO SEO优化插件">HEXO SEO优化插件</span>
+            <span class="post-date" title="2019-04-04 10:25:00">2019/04/04</span>
+        </a>
+        
+        <a class="技术 " href="/post/30492970.html" data-tag="php" data-author>
+            <span class="post-title" title="php中的闭包和匿名函数">php中的闭包和匿名函数</span>
+            <span class="post-date" title="2019-04-03 11:17:09">2019/04/03</span>
+        </a>
+        
+        <a class="技术 " href="/post/3db89d5f.html" data-tag="php" data-author>
+            <span class="post-title" title="lavarel核心概念">lavarel核心概念</span>
+            <span class="post-date" title="2019-04-02 10:24:12">2019/04/02</span>
+        </a>
+        
+        <a class="工具 " href="/post/843cc845.html" data-tag="git" data-author>
+            <span class="post-title" title="gitignore文件">gitignore文件</span>
+            <span class="post-date" title="2019-03-29 15:54:44">2019/03/29</span>
+        </a>
+        
+        <a class="工具 " href="/post/925e341a.html" data-tag="git" data-author>
+            <span class="post-title" title="git配置">git配置</span>
+            <span class="post-date" title="2019-03-29 15:52:50">2019/03/29</span>
+        </a>
+        
+        <a class="工具 " href="/post/423abe9e.html" data-tag="git" data-author>
+            <span class="post-title" title="git常用命令">git常用命令</span>
+            <span class="post-date" title="2019-03-29 15:15:00">2019/03/29</span>
+        </a>
+        
+        <a class="工具 " href="/post/5a3fb175.html" data-tag="hexo" data-author>
+            <span class="post-title" title="hexo插件">hexo插件</span>
+            <span class="post-date" title="2019-03-28 22:51:53">2019/03/28</span>
+        </a>
+        
+        <a class="工具 " href="/post/26175.html" data-tag="linux" data-author>
+            <span class="post-title" title="liunx常用命令">liunx常用命令</span>
+            <span class="post-date" title="2019-03-28 21:39:50">2019/03/28</span>
+        </a>
+        
+        <a class="工具 " href="/post/38848.html" data-tag="chkConfig" data-author>
+            <span class="post-title" title="chkconfig服务管理说明">chkconfig服务管理说明</span>
+            <span class="post-date" title="2019-03-28 21:00:00">2019/03/28</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-tech/tp3-2使用心得" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">tp3.2使用心得</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="技术">技术</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color4">thinkPhp</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title="更新时间: 2020-01-19 08:55:21">2019-10-15 13:44</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#入口文件配置"><span class="toc-text">入口文件配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常用配置"><span class="toc-text">常用配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#app-debug"><span class="toc-text">app_debug</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#confg-ext"><span class="toc-text">confg_ext</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#conf-parse"><span class="toc-text">conf_parse</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#app-mode"><span class="toc-text">app_mode</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#storage-type"><span class="toc-text">storage_type</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目录结构"><span class="toc-text">目录结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#app-path"><span class="toc-text">app_path</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#runtime-path"><span class="toc-text">runtime_path</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#log-path"><span class="toc-text">log_path</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#temp-path"><span class="toc-text">temp_path</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#data-path"><span class="toc-text">data_path</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#cache-path"><span class="toc-text">cache_path</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#common-path"><span class="toc-text">common_path</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#config-path"><span class="toc-text">config_path</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#lang-path"><span class="toc-text">lang_path</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#html-path"><span class="toc-text">html_path</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#addon-path"><span class="toc-text">addon_path</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#think-path"><span class="toc-text">think_path</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#lib-path"><span class="toc-text">lib_path</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#core-path"><span class="toc-text">core_path</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#behavior-path"><span class="toc-text">behavior_path</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其它访问常量"><span class="toc-text">其它访问常量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IS-CGI"><span class="toc-text">IS_CGI</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IS-WIN"><span class="toc-text">IS_WIN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IS-CLI"><span class="toc-text">IS_CLI</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PHP-FILE"><span class="toc-text">__PHP_FILE__</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ROOT"><span class="toc-text">__ROOT__</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#NOW-TIME"><span class="toc-text">NOW_TIME</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#REQUEST-METHOD"><span class="toc-text">REQUEST_METHOD</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IS-GET"><span class="toc-text">IS_GET</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IS-POST"><span class="toc-text">IS_POST</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IS-PUT"><span class="toc-text">IS_PUT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IS-DELETE"><span class="toc-text">IS_DELETE</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IS-AJAX"><span class="toc-text">IS_AJAX</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MODULE-NAME"><span class="toc-text">MODULE_NAME</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MODULE-PATH"><span class="toc-text">MODULE_PATH</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CONTROLLER-NAME"><span class="toc-text">CONTROLLER_NAME</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CONTROLLER-PATH"><span class="toc-text">CONTROLLER_PATH</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ACTION-NAME"><span class="toc-text">ACTION_NAME</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命名空间"><span class="toc-text">命名空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#行为标签"><span class="toc-text">行为标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#调试"><span class="toc-text">调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由"><span class="toc-text">路由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#url基础设置"><span class="toc-text">url基础设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#url模式"><span class="toc-text">url模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#域名路由"><span class="toc-text">域名路由</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制台"><span class="toc-text">控制台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#http处理"><span class="toc-text">http处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#重定向"><span class="toc-text">重定向</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#错误处理"><span class="toc-text">错误处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#异常处理"><span class="toc-text">异常处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模型"><span class="toc-text">模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#实例化"><span class="toc-text">实例化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字段缓存"><span class="toc-text">字段缓存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库配置"><span class="toc-text">数据库配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#切换数据库"><span class="toc-text">切换数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分布式数据库"><span class="toc-text">分布式数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查询方法"><span class="toc-text">查询方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命名范围"><span class="toc-text">命名范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据创建"><span class="toc-text">数据创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据写入"><span class="toc-text">数据写入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据读取"><span class="toc-text">数据读取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新数据"><span class="toc-text">更新数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除"><span class="toc-text">删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ActiveRecord"><span class="toc-text">ActiveRecord</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-6 i,
+    .toc-level-6 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="入口文件配置"><a href="#入口文件配置" class="headerlink" title="入口文件配置"></a>入口文件配置</h2><p>应用入口index.php<strong>常量配置</strong>；</p>
+<h3 id="常用配置"><a href="#常用配置" class="headerlink" title="常用配置"></a>常用配置</h3><h4 id="app-debug"><a href="#app-debug" class="headerlink" title="app_debug"></a>app_debug</h4><p>开启调试模式，影响如下：</p>
+<ul>
+<li>将加载，<code>$runtimefile = RUNTIME_PATH . APP_MODE . &#39;~runtime.php&#39;;</code></li>
+</ul>
+<pre><code class="php">define(&#39;APP_DEBUG&#39;, true);
+
+//默认是关闭调试模式
+defined(&#39;APP_DEBUG&#39;) or define(&#39;APP_DEBUG&#39;, false); // 是否调试模式
+</code></pre>
+<h4 id="confg-ext"><a href="#confg-ext" class="headerlink" title="confg_ext"></a>confg_ext</h4><pre><code class="php">defined(&#39;CONF_EXT&#39;) or define(&#39;CONF_EXT&#39;, &#39;.php&#39;); // 配置文件后缀
+</code></pre>
+<h4 id="conf-parse"><a href="#conf-parse" class="headerlink" title="conf_parse"></a>conf_parse</h4><pre><code class="php">defined(&#39;CONF_PARSE&#39;) or define(&#39;CONF_PARSE&#39;, &#39;&#39;); // 配置文件解析方法
+</code></pre>
+<h4 id="app-mode"><a href="#app-mode" class="headerlink" title="app_mode"></a>app_mode</h4><p>定义应用模式，默认为普通模式，有以下模式，定义不同的模式将加载不同的Mode核心文件（ThinkPHP/Mode目录下的模式配置文件），主要是加载一些核心文件，设置配置，别名，行为标签啥的；</p>
+<ul>
+<li>API模式定义</li>
+<li>普通模式定义</li>
+<li>Lite模式定义</li>
+<li>SAE应用模式定义文件</li>
+</ul>
+<p>如果CONF_PATH . ‘core.php’存在的话，则读取这个，不读取模式目录下的配置文件；</p>
+<pre><code class="php">//默认
+defined(&#39;APP_MODE&#39;) or define(&#39;APP_MODE&#39;, &#39;common&#39;); // 应用模式 默认为普通模式
+</code></pre>
+<h4 id="storage-type"><a href="#storage-type" class="headerlink" title="storage_type"></a>storage_type</h4><p>存储类型，默认为File</p>
+<pre><code class="php">defined(&#39;STORAGE_TYPE&#39;) or define(&#39;STORAGE_TYPE&#39;, &#39;File&#39;); // 存储类型 默认为File
+</code></pre>
+<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><h4 id="app-path"><a href="#app-path" class="headerlink" title="app_path"></a>app_path</h4><p>定义<strong>应用目录</strong>，影响如下：</p>
+<ul>
+<li>可以修改应用目录的位置；</li>
+<li>可以修改应用目录的名称；</li>
+<li>如果不定义就是在index.php的位置，代码目录就会混乱</li>
+<li>并且影响一下几个默认的目录结构</li>
+</ul>
+<pre><code class="php">define(&#39;APP_PATH&#39;, &#39;./Application/&#39;);
+//默认
+defined(&#39;APP_PATH&#39;) or define(&#39;APP_PATH&#39;, dirname($_SERVER[&#39;SCRIPT_FILENAME&#39;]) . &#39;/&#39;);
+</code></pre>
+<h5 id="runtime-path"><a href="#runtime-path" class="headerlink" title="runtime_path"></a>runtime_path</h5><p>系统运行时目录，存一些临时文件，默认在<strong>应用目录</strong>下Runtime目录</p>
+<pre><code class="php">defined(&#39;RUNTIME_PATH&#39;) or define(&#39;RUNTIME_PATH&#39;, APP_PATH . &#39;Runtime/&#39;); // 系统运行时目录
+</code></pre>
+<h6 id="log-path"><a href="#log-path" class="headerlink" title="log_path"></a>log_path</h6><p>应用日志目录，默认在应用运行目录下</p>
+<pre><code class="php">defined(&#39;LOG_PATH&#39;) or define(&#39;LOG_PATH&#39;, RUNTIME_PATH . &#39;Logs/&#39;); // 应用日志目录
+</code></pre>
+<h6 id="temp-path"><a href="#temp-path" class="headerlink" title="temp_path"></a>temp_path</h6><p>应用缓存目录，默认在应用运行目录下</p>
+<pre><code class="php">defined(&#39;TEMP_PATH&#39;) or define(&#39;TEMP_PATH&#39;, RUNTIME_PATH . &#39;Temp/&#39;); // 应用缓存目录
+</code></pre>
+<h6 id="data-path"><a href="#data-path" class="headerlink" title="data_path"></a>data_path</h6><p>应用数据目录，默认在应用运行目录下</p>
+<pre><code class="php">defined(&#39;DATA_PATH&#39;) or define(&#39;DATA_PATH&#39;, RUNTIME_PATH . &#39;Data/&#39;); // 应用数据目录
+</code></pre>
+<h6 id="cache-path"><a href="#cache-path" class="headerlink" title="cache_path"></a>cache_path</h6><p>应用模板缓存目录，默认在应用运行目录下</p>
+<pre><code class="php">defined(&#39;CACHE_PATH&#39;) or define(&#39;CACHE_PATH&#39;, RUNTIME_PATH . &#39;Cache/&#39;); // 应用模板缓存目录
+</code></pre>
+<h5 id="common-path"><a href="#common-path" class="headerlink" title="common_path"></a>common_path</h5><p>应用公共目录，默认在<strong>应用目录</strong>下</p>
+<pre><code class="php">defined(&#39;COMMON_PATH&#39;) or define(&#39;COMMON_PATH&#39;, APP_PATH . &#39;Common/&#39;); // 应用公共目录
+</code></pre>
+<h6 id="config-path"><a href="#config-path" class="headerlink" title="config_path"></a>config_path</h6><p>应用配置目录，默认在公共目录下</p>
+<pre><code class="php">defined(&#39;CONF_PATH&#39;) or define(&#39;CONF_PATH&#39;, COMMON_PATH . &#39;Conf/&#39;); // 应用配置目录
+</code></pre>
+<h6 id="lang-path"><a href="#lang-path" class="headerlink" title="lang_path"></a>lang_path</h6><p> 应用语言，默认在应用公共目录下</p>
+<pre><code class="php">defined(&#39;LANG_PATH&#39;) or define(&#39;LANG_PATH&#39;, COMMON_PATH . &#39;Lang/&#39;); // 应用语言目录
+</code></pre>
+<h5 id="html-path"><a href="#html-path" class="headerlink" title="html_path"></a>html_path</h5><p>应用静态目录，默认在<strong>应用目录</strong>下</p>
+<pre><code class="php">defined(&#39;HTML_PATH&#39;) or define(&#39;HTML_PATH&#39;, APP_PATH . &#39;Html/&#39;); // 应用静态目录
+</code></pre>
+<h5 id="addon-path"><a href="#addon-path" class="headerlink" title="addon_path"></a>addon_path</h5><p>插件目录</p>
+<pre><code class="php">defined(&#39;ADDON_PATH&#39;) or define(&#39;ADDON_PATH&#39;, APP_PATH . &#39;Addon&#39;);
+</code></pre>
+<h4 id="think-path"><a href="#think-path" class="headerlink" title="think_path"></a>think_path</h4><p>定义核心文件位置，默认值就是ThinkPhp的目录</p>
+<pre><code class="php">defined(&#39;THINK_PATH&#39;) or define(&#39;THINK_PATH&#39;, __DIR__ . &#39;/&#39;);
+</code></pre>
+<h5 id="lib-path"><a href="#lib-path" class="headerlink" title="lib_path"></a>lib_path</h5><p>系统核心类库目录</p>
+<pre><code class="php">defined(&#39;LIB_PATH&#39;) or define(&#39;LIB_PATH&#39;, realpath(THINK_PATH . &#39;Library&#39;) . &#39;/&#39;); // 系统核心类库目录
+</code></pre>
+<h6 id="core-path"><a href="#core-path" class="headerlink" title="core_path"></a>core_path</h6><p>Think类库目录</p>
+<pre><code>defined(&#39;CORE_PATH&#39;) or define(&#39;CORE_PATH&#39;, LIB_PATH . &#39;Think/&#39;); // Think类库目录
+</code></pre><h6 id="behavior-path"><a href="#behavior-path" class="headerlink" title="behavior_path"></a>behavior_path</h6><p>行为类库目录</p>
+<pre><code>defined(&#39;BEHAVIOR_PATH&#39;) or define(&#39;BEHAVIOR_PATH&#39;, LIB_PATH . &#39;Behavior/&#39;); // 行为类库目录
+</code></pre><h3 id="其它访问常量"><a href="#其它访问常量" class="headerlink" title="其它访问常量"></a>其它访问常量</h3><h4 id="IS-CGI"><a href="#IS-CGI" class="headerlink" title="IS_CGI"></a>IS_CGI</h4><h4 id="IS-WIN"><a href="#IS-WIN" class="headerlink" title="IS_WIN"></a>IS_WIN</h4><h4 id="IS-CLI"><a href="#IS-CLI" class="headerlink" title="IS_CLI"></a>IS_CLI</h4><h4 id="PHP-FILE"><a href="#PHP-FILE" class="headerlink" title="__PHP_FILE__"></a>__PHP_FILE__</h4><p>cgi请求时候，脚本的脚本的的相对documen_root地址，cli模式不需要，因为本身就需要输入脚本地址；</p>
+<h4 id="ROOT"><a href="#ROOT" class="headerlink" title="__ROOT__"></a>__ROOT__</h4><p>__PHP_FILE_的目录，也就脚本的相对目录</p>
+<h4 id="NOW-TIME"><a href="#NOW-TIME" class="headerlink" title="NOW_TIME"></a>NOW_TIME</h4><h4 id="REQUEST-METHOD"><a href="#REQUEST-METHOD" class="headerlink" title="REQUEST_METHOD"></a>REQUEST_METHOD</h4><h4 id="IS-GET"><a href="#IS-GET" class="headerlink" title="IS_GET"></a>IS_GET</h4><h4 id="IS-POST"><a href="#IS-POST" class="headerlink" title="IS_POST"></a>IS_POST</h4><h4 id="IS-PUT"><a href="#IS-PUT" class="headerlink" title="IS_PUT"></a>IS_PUT</h4><h4 id="IS-DELETE"><a href="#IS-DELETE" class="headerlink" title="IS_DELETE"></a>IS_DELETE</h4><h4 id="IS-AJAX"><a href="#IS-AJAX" class="headerlink" title="IS_AJAX"></a>IS_AJAX</h4><h4 id="MODULE-NAME"><a href="#MODULE-NAME" class="headerlink" title="MODULE_NAME"></a>MODULE_NAME</h4><p>获取模块名称</p>
+<h4 id="MODULE-PATH"><a href="#MODULE-PATH" class="headerlink" title="MODULE_PATH"></a>MODULE_PATH</h4><p>当前模块路径</p>
+<h4 id="CONTROLLER-NAME"><a href="#CONTROLLER-NAME" class="headerlink" title="CONTROLLER_NAME"></a>CONTROLLER_NAME</h4><h4 id="CONTROLLER-PATH"><a href="#CONTROLLER-PATH" class="headerlink" title="CONTROLLER_PATH"></a>CONTROLLER_PATH</h4><h4 id="ACTION-NAME"><a href="#ACTION-NAME" class="headerlink" title="ACTION_NAME"></a>ACTION_NAME</h4><h2 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h2><blockquote>
+<p>要使用命名空间加载，则类名里必须包含\，如果關閉命名空間的話，則还有还有另外一套规则，忽略；</p>
+</blockquote>
+<p>1、首先看Think\Think::$_map[$class],有没有映射；</p>
+<p>其实就是设置的类别名：</p>
+<ul>
+<li>模式配置文件下有设置一些别名；</li>
+<li><code>CONF_PATH . &#39;alias.php&#39;</code>文件可以设置别名；</li>
+</ul>
+<p>2、<strong>命名空间的首个单词</strong>为’Think’, ‘Org’, ‘Behavior’, ‘Com’, ‘Vendor’的，或者lib_path目录下存在<strong>命名空间的首个单词</strong>目录则：</p>
+<p>加载<code>LIB_PATH.命名空间.php</code>文件，起始命名空间就像是相对目录，就是绝对目录和相对目录的拼接；</p>
+<p>3、检测自定义命名空间 否则就以模块为命名空间：</p>
+<pre><code class="php">return [
+    &#39;AUTOLOAD_NAMESPACE&#39;=&gt;[
+        &#39;命名空间的首个单词1&#39;=&gt;&#39;目录/&#39;,
+    ]
+];
+</code></pre>
+<p>4、否则的话:</p>
+<p>$path = APP_PATH;</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>惯例配置</p>
+<p>-&gt;应用配置，common/config.php</p>
+<p>-&gt;应用模式配置（不是common模式）</p>
+<p>-&gt;<code>THINK_PATH . &#39;Conf/debug.php&#39;</code>(开启调试模式的话)</p>
+<p>-&gt;<code>CONF_PATH . &#39;debug&#39; . CONF_EXT</code>（开启调试模式的话）</p>
+<p>-&gt;<code>CONF_PATH . APP_STATUS . CONF_EXT</code>（状态配置）</p>
+<blockquote>
+<p>这一部分会改变COMMON_PATH</p>
+</blockquote>
+<p>-&gt; <code>COMMON_PATH. &#39;Common/&#39; . $file . &#39;.php&#39;</code>(扩展配置，LOAD_EXT_FILE配置)</p>
+<pre><code class="php">return [
+    &#39;LOAD_EXT_FILE&#39;=&gt;&#39;文件名1,文件名2&#39;
+];
+</code></pre>
+<p>-&gt;LOAD_EXT_CONFIG配置</p>
+<pre><code class="php">return [
+    &#39;LOAD_EXT_CONFIG&#39;=&gt;&#39;完整的文件路径1,完整的文件路径2&#39;
+];
+
+// $path . &#39;Conf/&#39;.文件名.php
+return [
+    &#39;LOAD_EXT_CONFIG&#39;=&gt;&#39;文件名1,文件名2&#39;
+];
+return [
+    &#39;LOAD_EXT_CONFIG&#39;=&gt;[
+        &#39;key&#39;=&gt;类似上面两种,
+    ]
+];
+</code></pre>
+<blockquote>
+<p>这一部分是模块</p>
+</blockquote>
+<p>-&gt;模块配置conf.php</p>
+<p>-&gt;模块模式配置<code>&#39;Conf/config_&#39; . APP_MODE . CONF_EXT</code></p>
+<p>-&gt;模块应用状态配置<code>&#39;Conf/&#39; . APP_STATUS . CONF_EXT</code></p>
+<p>-&gt;模块别名文件Conf/alias.php</p>
+<p>-&gt;模块标签文件’Conf/tags.php’</p>
+<p>-&gt;加载函数模块下的’Common/function.php’;</p>
+<p>-&gt;加载模块的额外文件，模块下的’Common/‘ . $file . ‘.php’;与应用相同</p>
+<p>-&gt;加载额外的配置，与应用LOAD_EXT_CONFIG相同</p>
+<p><strong>配置文件格式</strong></p>
+<pre><code class="php">return [
+    // 日志目录转换为绝对路径 默认情况下存储到公共模块下面
+    &#39;LOG_PATH&#39;=&gt;C(&#39;LOG_PATH&#39;, realpath(LOG_PATH) . &#39;/Common/&#39;),
+    // 全局安全过滤,$_REQUEST,$_POST,$_GET
+    &#39;REQUEST_VARS_FILTER&#39;=&gt;true,
+];
+</code></pre>
+<h2 id="行为标签"><a href="#行为标签" class="headerlink" title="行为标签"></a>行为标签</h2><p><strong>系统默认的有</strong></p>
+<ul>
+<li>url_dispatch</li>
+<li>app_init，app初始化</li>
+<li>module_config，模块配置完成</li>
+</ul>
+<p>标签基本配置</p>
+<ul>
+<li>标签定义</li>
+</ul>
+<p>在模式配置文件中可以定义行为参数；</p>
+<p><code>CONF_PATH . &#39;tags.php&#39;</code>文件中定义</p>
+<pre><code class="php">array(
+        &#39;app_init&#39;        =&gt; array(
+            &#39;Behavior\BuildLiteBehavior&#39;, // 生成运行Lite文件
+        ),
+        &#39;app_begin&#39;       =&gt; array(
+            &#39;Behavior\ReadHtmlCacheBehavior&#39;, // 读取静态缓存
+        ),
+        &#39;app_end&#39;         =&gt; array(
+            &#39;Behavior\ShowPageTraceBehavior&#39;, // 页面Trace显示
+        ),
+        &#39;view_parse&#39;      =&gt; array(
+            &#39;Behavior\ParseTemplateBehavior&#39;, // 模板解析 支持PHP、内置模板引擎和第三方模板引擎
+        ),
+        &#39;template_filter&#39; =&gt; array(
+            &#39;Behavior\ContentReplaceBehavior&#39;, // 模板输出替换
+        ),
+        &#39;view_filter&#39;     =&gt; array(
+            &#39;Behavior\WriteHtmlCacheBehavior&#39;, // 写入静态缓存
+        ),
+    ),
+</code></pre>
+<ul>
+<li>监听标签</li>
+</ul>
+<pre><code class="php">Hook::listen(&#39;app_init&#39;);
+</code></pre>
+<ul>
+<li>执行标签</li>
+</ul>
+<pre><code class="php">Hook::exec($插件名称, $方法名（标签名，如果是Behavior结尾的类则被替换run）, $params)；
+//new $插件名称()-&gt;$方法名($params);
+</code></pre>
+<h2 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h2><p>记录和统计时间（微秒）和内存使用情况</p>
+<pre><code class="php">* &lt;code&gt;
+ * G(&#39;begin&#39;); // 记录开始标记位
+ * // ... 区间运行代码
+ * G(&#39;end&#39;); // 记录结束标签位
+ * echo G(&#39;begin&#39;,&#39;end&#39;,6); // 统计区间运行时间 精确到小数后6位
+ * echo G(&#39;begin&#39;,&#39;end&#39;,&#39;m&#39;); // 统计区间内存使用情况
+ * 如果end标记位没有定义，则会自动以当前作为标记位
+ * 其中统计内存使用需要 MEMORY_LIMIT_ON 常量为true才有效
+ * &lt;/code&gt;
+</code></pre>
+<p>trace</p>
+<p>开启配置</p>
+<pre><code class="php">&#39;TRACE_EXCEPTION&#39;=&gt;true
+</code></pre>
+<pre><code class="php">Log::save();
+</code></pre>
+<h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><h3 id="url基础设置"><a href="#url基础设置" class="headerlink" title="url基础设置"></a>url基础设置</h3><p>URL大小写，解决linux下大小写的问题</p>
+<pre><code class="php">&#39;URL_CASE_INSENSITIVE&#39;  =&gt;  true,  
+&#39;URL_DENY_SUFFIX&#39;        =&gt; &#39;ico|png|gif|jpg&#39;, // URL禁止访问的后缀设置
+</code></pre>
+<h3 id="url模式"><a href="#url模式" class="headerlink" title="url模式"></a>url模式</h3><ul>
+<li>普通模式</li>
+</ul>
+<p><strong>普通模式</strong>也就是传统的GET传参方式来指定当前访问的模块和操作，例如： <code>http://localhost/?m=home&amp;c=user&amp;a=login&amp;var=value</code></p>
+<pre><code class="php">[
+    &#39;URL_MODEL&#39;=&gt;0,
+    // m参数表示模块，c参数表示控制器，a参数表示操作，后面的表示其他GET参数
+    &#39;VAR_MODULE&#39;            =&gt;  &#39;m&#39;,     // 默认模块获取变量
+    &#39;VAR_CONTROLLER&#39;        =&gt;  &#39;c&#39;,    // 默认控制器获取变量
+    &#39;VAR_ACTION&#39;            =&gt;  &#39;a&#39;,    // 默认操作获取变量
+]
+</code></pre>
+<ul>
+<li>PATHINFO模式</li>
+</ul>
+<p>默认URL模式，提供了最好的SEO支持，URL访问地址是： <code>http://localhost/index.php/home/user/login/var/value/</code>;</p>
+<p>可以采用普通URL模式的参数方式，例如： <code>http://localhost/index.php/home/user/login?var=value</code> 依然是有效的</p>
+<pre><code class="php">&#39;URL_PATHINFO_DEPR&#39;=&gt;&#39;/&#39;, 
+&#39;URL_MODEL&#39;=&gt;&#39;1&#39;,
+</code></pre>
+<ul>
+<li>REWRITE模式</li>
+</ul>
+<p>PATHINFO模式的基础上，可以去掉URL地址里面的入口文件index.php,需要配置nginx重新规则</p>
+<pre><code class="php"> &#39;URL_MODEL&#39;=&gt;&#39;2&#39;,
+</code></pre>
+<ul>
+<li>兼容模式</li>
+</ul>
+<p>需要配置VAR_PATHINFO参数，用来获取path_info，主要对于那些不支持path_info服务器</p>
+<pre><code class="php">[
+    &#39;URL_MODEL&#39;=&gt;3,
+    // 兼容模式PATHINFO获取变量例如 ?s=/module/action/id/1 后面的参数取决于URL_PATHINFO_DEPR
+    &#39;VAR_PATHINFO&#39;=&gt; &#39;s&#39;,
+    &#39;URL_PATHINFO_DEPR&#39;=&gt;&#39;/&#39;, 
+    // 用于兼容判断PATH_INFO 参数的SERVER替代变量列表
+    &#39;URL_PATHINFO_FETCH&#39;     =&gt; &#39;ORIG_PATH_INFO,REDIRECT_PATH_INFO,REDIRECT_URL&#39;, 
+]
+</code></pre>
+<h3 id="域名路由"><a href="#域名路由" class="headerlink" title="域名路由"></a>域名路由</h3><p>域名指向特定的模块；规则为：<code>&#39;子域名&#39;=&gt;array(&#39;模块名[/控制器名]&#39;,&#39;var1=a&amp;var2=b&#39;);</code></p>
+<pre><code class="php">return [
+    &#39;APP_SUB_DOMAIN_DEPLOY&#39; =&gt; true,
+    &#39;APP_SUB_DOMAIN_RULES&#39; =&gt; array(
+        &#39;free.mozhan.com&#39; =&gt;&#39;Free&#39;,
+        &#39;admin.mozhan.com&#39; =&gt; &#39;Admin&#39;,
+        //&#39;user.mozhan.com:8080&#39; =&gt; &#39;User&#39;,
+        &#39;user.mozhan.com&#39; =&gt; &#39;User&#39;,
+        &#39;user5.zhongyidong.com&#39; =&gt; &#39;User&#39;,
+        &#39;user.xuanchuanyi.com&#39; =&gt; &#39;User&#39;,
+        &#39;user.258weishi.com&#39; =&gt; &#39;User&#39;,
+        &#39;user2.weitang.com&#39; =&gt; &#39;User&#39;,
+        &#39;interFaces.mozhan.com&#39; =&gt; &#39;InterFaces&#39;,
+        &#39;api.mozhan.com&#39; =&gt; &#39;Api&#39;,
+        &#39;plugins.mozhan.com&#39; =&gt; &#39;Plugins&#39;,
+        &#39;k.mozhan.com&#39;=&gt; &#39;Quick&#39;,
+        &#39;*&#39; =&gt; &#39;Home&#39;, // 二级泛域名指向Home模块
+    ),
+];
+</code></pre>
+<h2 id="控制台"><a href="#控制台" class="headerlink" title="控制台"></a>控制台</h2><p>脚本的第一个参数就当做pathinfo</p>
+<pre><code class="php">$_SERVER[&#39;PATH_INFO&#39;] = isset($_SERVER[&#39;argv&#39;][1]) ? $_SERVER[&#39;argv&#39;][1] : &#39;&#39;;
+</code></pre>
+<h2 id="http处理"><a href="#http处理" class="headerlink" title="http处理"></a>http处理</h2><h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><pre><code class="php">  send_http_status(404);
+  exit;
+</code></pre>
+<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><p>抛出Think\Exception($msg, $code)异常</p>
+<pre><code class="php">E($msg, $code = 0)
+</code></pre>
+<h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><p>实例化时候的方法</p>
+<pre><code class="php">protected _initialize () {
+
+}
+</code></pre>
+<p>添加错误信息</p>
+<pre><code class="php"> $this-&gt;error = L(&#39;_DATA_TYPE_INVALID_&#39;);
+</code></pre>
+<p>获取插入id</p>
+<pre><code class="php"> $insertId = $this-&gt;getLastInsID();
+</code></pre>
+<p>获取sql</p>
+<pre><code class="php">$sql = $User-&gt;fetchSql(true)-&gt;add($data);
+</code></pre>
+<h3 id="实例化"><a href="#实例化" class="headerlink" title="实例化"></a>实例化</h3><p>new方法实例化</p>
+<ul>
+<li>D方法实例化</li>
+</ul>
+<p>不需要传递完整的类名，当 <code>\Home\Model\UserModel</code> 类不存在的时候，D函数会尝试实例化公共模块下面的 <code>\Common\Model\UserModel</code> 类，默认是实例化当前模块下的Model</p>
+<pre><code class="php">//实例化模型
+$User = D(&#39;User&#39;);
+// 相当于 $User = new \Home\Model\UserModel();
+</code></pre>
+<pre><code class="php">//D方法还可以支持跨模块调用，需要使用：
+//实例化Admin模块的User模型
+D(&#39;Admin/User&#39;);
+//实例化Extend扩展命名空间下的Info模型
+D(&#39;Extend://Editor/Info&#39;);
+</code></pre>
+<ul>
+<li>M方法实例化</li>
+</ul>
+<p>性能会比较高</p>
+<pre><code class="php">// 使用M方法实例化
+$User = M(&#39;User&#39;);
+// 和用法 $User = new \Think\Model(&#39;User&#39;); 等效
+// 执行其他的数据操作
+$User-&gt;select();
+</code></pre>
+<p>M方法也可以支持跨库操作，例如：</p>
+<pre><code class="php">// 使用M方法实例化 操作db_name数据库的ot_user表$User = M(&#39;db_name.User&#39;,&#39;ot_&#39;);// 执行其他的数据操作$User-&gt;select();
+</code></pre>
+<p>实例化空模型类，单单用于执行sql时候</p>
+<pre><code class="php">//实例化空模型
+$Model = new Model();
+//或者使用M快捷方法是等效的
+$Model = M();
+//进行原生的SQL查询
+$Model-&gt;query(&#39;SELECT * FROM think_user WHERE status = 1&#39;);
+</code></pre>
+<h3 id="字段缓存"><a href="#字段缓存" class="headerlink" title="字段缓存"></a>字段缓存</h3><p>不是调试模式都会再Runtime/Data/_fields/生成字段缓存；</p>
+<ul>
+<li>关闭字段缓存，在mysql配置里</li>
+</ul>
+<pre><code class="php">// 关闭字段缓存
+&#39;DB_FIELDS_CACHE&#39;=&gt;false    
+</code></pre>
+<p>在调试模式中默认是关闭的，但是测试的时候好像没有关闭；</p>
+<p>部署模式下，最后要清除缓存文件；</p>
+<ul>
+<li>手动定义字段</li>
+</ul>
+<p>如果不行用缓存，又想提高效率则可以手动定义，但是不推荐</p>
+<pre><code class="php">namespace Home\Model;
+use Think\Model;
+class UserModel extends Model {
+    protected $fields = array(&#39;id&#39;, &#39;username&#39;, &#39;email&#39;, &#39;age&#39;);
+    protected $pk     = &#39;id&#39;;
+}
+</code></pre>
+<p>还可以定义字段类型</p>
+<pre><code class="php">namespace Home\Model;
+use Think\Model;
+class UserModel extends Model {
+    protected $fields = array(&#39;id&#39;, &#39;username&#39;, &#39;email&#39;, &#39;age&#39;,
+        &#39;_type&#39;=&gt;array(&#39;id&#39;=&gt;&#39;bigint&#39;,&#39;username&#39;=&gt;&#39;varchar&#39;,&#39;email&#39;=&gt;&#39;varchar&#39;,&#39;age&#39;=&gt;&#39;int&#39;)
+    );
+}
+</code></pre>
+<h3 id="数据库配置"><a href="#数据库配置" class="headerlink" title="数据库配置"></a>数据库配置</h3><ul>
+<li>数组方式配置</li>
+</ul>
+<p>调试模式配置</p>
+<pre><code class="php">//数据库配置信息
+&#39;DB_TYPE&#39;   =&gt; &#39;mysql&#39;, // 数据库类型
+&#39;DB_HOST&#39;   =&gt; &#39;localhost&#39;, // 服务器地址
+&#39;DB_NAME&#39;   =&gt; &#39;thinkphp&#39;, // 数据库名
+&#39;DB_USER&#39;   =&gt; &#39;root&#39;, // 用户名
+&#39;DB_PWD&#39;    =&gt; &#39;123456&#39;, // 密码
+&#39;DB_PORT&#39;   =&gt; 3306, // 端口
+&#39;DB_PREFIX&#39; =&gt; &#39;think_&#39;, // 数据库表前缀 
+&#39;DB_CHARSET&#39;=&gt; &#39;utf8&#39;, // 字符集
+&#39;DB_DEBUG&#39;  =&gt;  TRUE, // 数据库调试模式 开启后可以记录SQL日志 3.2.3新增
+</code></pre>
+<p>数据库的类型由<strong>DB_TYPE</strong>参数设置</p>
+<table>
+<thead>
+<tr>
+<th>DB_TYPE设置</th>
+<th>支持的数据库类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mysql或mysqli</td>
+<td>mysql</td>
+</tr>
+<tr>
+<td>pgsql</td>
+<td>pgsql</td>
+</tr>
+<tr>
+<td>sqlite</td>
+<td>sqlite</td>
+</tr>
+<tr>
+<td>mssql 或sqlsrv</td>
+<td>sqlserver</td>
+</tr>
+<tr>
+<td>oracle</td>
+<td>oracle</td>
+</tr>
+<tr>
+<td>ibase</td>
+<td>ibase</td>
+</tr>
+<tr>
+<td>mongo</td>
+<td>mongo</td>
+</tr>
+<tr>
+<td>PDO</td>
+<td>PDO支持的所有数据库 3.2.3以上版本取消了PDO设置</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>DB_SN方式配置</li>
+</ul>
+<p>格式为，数据库类型://用户名:密码@数据库地址:数据库端口/数据库名#字符集</p>
+<pre><code class="php">//PDO连接方式
+&#39;DB_TYPE&#39;   =&gt; &#39;pdo&#39;, // 数据库类型
+&#39;DB_USER&#39;   =&gt; &#39;root&#39;, // 用户名
+&#39;DB_PWD&#39;    =&gt; &#39;&#39;, // 密码
+&#39;DB_PREFIX&#39; =&gt; &#39;think_&#39;, // 数据库表前缀 
+&#39;DB_DSN&#39;    =&gt; &#39;mysql:host=localhost;dbname=thinkphp;charset=utf8&#39;
+</code></pre>
+<p>还可以在模式属性中定义，实例化传递参数时候定义；</p>
+<h3 id="切换数据库"><a href="#切换数据库" class="headerlink" title="切换数据库"></a>切换数据库</h3><h3 id="分布式数据库"><a href="#分布式数据库" class="headerlink" title="分布式数据库"></a>分布式数据库</h3><p>开启来DB_DEPLOY_TYPE = 1；</p>
+<pre><code class="php">&#39;DB_DEPLOY_TYPE&#39;         =&gt; 0, // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
+&#39;DB_RW_SEPARATE&#39;         =&gt; false, // 数据库读写是否分离 主从式有效
+&#39;DB_MASTER_NUM&#39;          =&gt; 1, // 读写分离后 主服务器数量
+&#39;DB_SLAVE_NO&#39;            =&gt; &#39;&#39;, // 指定从服务器序号
+</code></pre>
+<h3 id="查询方法"><a href="#查询方法" class="headerlink" title="查询方法"></a>查询方法</h3><h3 id="命名范围"><a href="#命名范围" class="headerlink" title="命名范围"></a>命名范围</h3><ul>
+<li><code>_scope</code>属性定义</li>
+</ul>
+<pre><code class="php">namespace Home\Model;
+use Think\Model;
+class NewsModel extends Model {
+     protected $_scope = array(
+         // 命名范围normal
+         &#39;normal&#39;=&gt;array(
+             &#39;where&#39;=&gt;array(&#39;status&#39;=&gt;1),
+         ),
+         // 命名范围latest
+         &#39;latest&#39;=&gt;array(
+             &#39;order&#39;=&gt;&#39;create_time DESC&#39;,
+             &#39;limit&#39;=&gt;10,
+         ),
+     );
+}
+</code></pre>
+<p>使用<code>scope</code>方法进行命名范围的调用</p>
+<pre><code class="php">$Model = D(&#39;News&#39;); // 这里必须使用D方法 因为命名范围在模型里面定义
+$Model-&gt;scope(&#39;normal&#39;)-&gt;select();
+$Model-&gt;scope(&#39;latest&#39;)-&gt;select();
+</code></pre>
+<ul>
+<li>连贯调用：</li>
+</ul>
+<p>两个命名范围的定义存在冲突，则后面调用的命名范围定义会覆盖前面的相同属性的定义；</p>
+<p>调用的命名范围标识不存在，则会忽略该命名范围</p>
+<pre><code>$Model-&gt;scope(&#39;normal&#39;)-&gt;scope(&#39;latest&#39;)-&gt;select();
+
+//简化
+$Model-&gt;scope(&#39;normal,latest&#39;)-&gt;select();
+</code></pre><ul>
+<li>默认命名范围</li>
+</ul>
+<pre><code class="php"> protected $_scope = array(
+         // 默认的命名范围
+         &#39;default&#39;=&gt;array(
+             &#39;where&#39;=&gt;array(&#39;status&#39;=&gt;1),
+             &#39;limit&#39;=&gt;10,
+         ),
+     );
+</code></pre>
+<p>调用</p>
+<pre><code class="php">// 无需传递参数
+$Model-&gt;scope()-&gt;select();
+
+// 或则
+$Model-&gt;scope(&#39;default&#39;)-&gt;select();
+</code></pre>
+<ul>
+<li>命名范围调整</li>
+</ul>
+<p>增加额外的调整，覆盖或者添加</p>
+<pre><code class="php">$Model-&gt;scope(&#39;normal&#39;,array(&#39;limit&#39;=&gt;5))-&gt;select();
+</code></pre>
+<p>多个范围调整，覆盖前面的</p>
+<pre><code class="php">$Model-&gt;scope(&#39;normal,latest&#39;,array(&#39;limit&#39;=&gt;5))-&gt;select();
+</code></pre>
+<ul>
+<li>自定义命名范围</li>
+</ul>
+<p>调用的时候定义</p>
+<pre><code class="php">$Model-&gt;scope(array(&#39;field&#39;=&gt;&#39;id,title&#39;,&#39;limit&#39;=&gt;5,&#39;where&#39;=&gt;&#39;status=1&#39;,&#39;order&#39;=&gt;&#39;create_time DESC&#39;))-&gt;select();
+</code></pre>
+<ul>
+<li>连贯操作</li>
+</ul>
+<p>如果定义的命名范围和连贯操作的属性有冲突，则后面调用的会覆盖前面的</p>
+<pre><code class="php">$Model-&gt;scope(&#39;normal&#39;)-&gt;limit(8)-&gt;order(&#39;id desc&#39;)-&gt;select();
+</code></pre>
+<ul>
+<li>动态调用</li>
+</ul>
+<pre><code class="php">$Model-&gt;scope(&#39;normal&#39;,array(&#39;limit&#39;=&gt;5))-&gt;select();
+
+// 等价
+$Model-&gt;normal(array(&#39;limit&#39;=&gt;5))-&gt;select();
+</code></pre>
+<h3 id="数据创建"><a href="#数据创建" class="headerlink" title="数据创建"></a>数据创建</h3><ul>
+<li>基础创建</li>
+</ul>
+<p>自动根据表单数据创建数据对象，使用<code>add</code>或者<code>save</code>方法才会真正写入数据库</p>
+<pre><code class="php">// 实例化User模型
+$User = M(&#39;User&#39;);
+// 根据表单提交的POST数据创建数据对象
+$User-&gt;create();
+
+//或者
+$data[&#39;name&#39;] = &#39;ThinkPHP&#39;;
+$data[&#39;email&#39;] = &#39;ThinkPHP@gmail.com&#39;;
+$User-&gt;create($data);
+</code></pre>
+<p>对象创建新的数据对象</p>
+<ul>
+<li>第二个参数可以指定创建数据的操作状态，表示是插入还是更新，默认是自动判断</li>
+</ul>
+<pre><code class="php">$Member = M(&quot;User&quot;);
+// 指定更新数据操作状态
+$Member-&gt;create($_POST,Model::MODEL_UPDATE);
+</code></pre>
+<ul>
+<li>流程</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>步骤</td>
+<td>说明</td>
+<td>返回</td>
+</tr>
+<tr>
+<td>1</td>
+<td>获取数据源（默认是POST数组）</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>验证数据源合法性（非数组或者对象会过滤）</td>
+<td>失败则返回false</td>
+</tr>
+<tr>
+<td>3</td>
+<td>检查字段映射</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>判断数据状态（新增或者编辑，指定或者自动判断）</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>数据自动验证</td>
+<td>失败则返回false</td>
+</tr>
+<tr>
+<td>6</td>
+<td>表单令牌验证</td>
+<td>失败则返回false</td>
+</tr>
+<tr>
+<td>7</td>
+<td>表单数据赋值（过滤非法字段和字符串处理）</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>数据自动完成</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>生成数据对象（保存在内存）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>data方法，不需要数据验证啥的时候使用</li>
+</ul>
+<p>可以自动过滤一些不存在的字段（不存在的字段，非法的数据类型）</p>
+<pre><code class="php">// 实例化User模型
+$User = M(&#39;User&#39;);
+// 创建数据后写入到数据库
+$data[&#39;name&#39;] = &#39;ThinkPHP&#39;;
+$data[&#39;email&#39;] = &#39;ThinkPHP@gmail.com&#39;;
+$User-&gt;data($data)-&gt;add();
+</code></pre>
+<ul>
+<li>字段合法性验证</li>
+</ul>
+<p>在create方法之前调用field方法；</p>
+<pre><code class="php">$data[&#39;name&#39;] = &#39;thinkphp&#39;;
+$data[&#39;email&#39;] = &#39;thinkphp@gmail.com&#39;;
+$data[&#39;status&#39;] = 1;
+$data[&#39;test&#39;] = &#39;test&#39;;
+$User = M(&#39;User&#39;);
+$data = $User-&gt;field(&#39;name,email&#39;)-&gt;create($data);
+dump($data);
+</code></pre>
+<p>自定义模型类</p>
+<pre><code>namespace Home\Model;
+use Think\Model;
+class UserModel extends Model{
+    protected $insertFields = &#39;name,email&#39;; // 新增数据的时候允许写入name和email字段
+    protected $updateFields = &#39;email&#39;; // 编辑数据的时候只允许写入email字段
+}
+</code></pre><h3 id="数据写入"><a href="#数据写入" class="headerlink" title="数据写入"></a>数据写入</h3><ul>
+<li>使用<strong>add方法</strong></li>
+</ul>
+<pre><code class="php">$User = M(&quot;User&quot;); // 实例化User对象
+$data[&#39;name&#39;] = &#39;ThinkPHP&#39;;
+$data[&#39;email&#39;] = &#39;ThinkPHP@gmail.com&#39;;
+$User-&gt;add($data);
+</code></pre>
+<ul>
+<li>字段内容过滤</li>
+</ul>
+<p>过filter方法可以对数据的值进行过滤处理</p>
+<pre><code class="php">$data[&#39;name&#39;] = &#39;&lt;b&gt;thinkphp&lt;/b&gt;&#39;;
+$data[&#39;email&#39;] = &#39;thinkphp@gmail.com&#39;;
+$User = M(&#39;User&#39;);
+// 字段内容strip_tags转换
+$User-&gt;data($data)-&gt;filter(&#39;strip_tags&#39;)-&gt;add();
+</code></pre>
+<ul>
+<li>批量写入</li>
+</ul>
+<pre><code class="php">// 批量添加数据
+$dataList[] = array(&#39;name&#39;=&gt;&#39;thinkphp&#39;,&#39;email&#39;=&gt;&#39;thinkphp@gamil.com&#39;);
+$dataList[] = array(&#39;name&#39;=&gt;&#39;onethink&#39;,&#39;email&#39;=&gt;&#39;onethink@gamil.com&#39;);
+$User-&gt;addAll($dataList);
+</code></pre>
+<h3 id="数据读取"><a href="#数据读取" class="headerlink" title="数据读取"></a>数据读取</h3><ul>
+<li>find()读取数据表中的第一行数据</li>
+</ul>
+<p>查询出错，find方法返回false;</p>
+<p>如果查询结果为空返回NULL</p>
+<p>成功则返回一个关联数组</p>
+<pre><code class="php">$User = M(&quot;User&quot;); // 实例化User对象
+// 查找status值为1name值为think的用户数据 
+$data = $User-&gt;where(&#39;status=1 AND name=&quot;thinkphp&quot;&#39;)-&gt;find();
+dump($data);
+</code></pre>
+<ul>
+<li>select()多行记录</li>
+</ul>
+<p>查询出错，select的返回值是false</p>
+<p>如果查询结果为空，则返回NULL</p>
+<p>否则返回二维数组</p>
+<pre><code class="php">$User = M(&quot;User&quot;); // 实例化User对象
+// 查找status值为1的用户数据 以创建时间排序 返回10条数据
+$list = $User-&gt;where(&#39;status=1&#39;)-&gt;order(&#39;create_time&#39;)-&gt;limit(10)-&gt;select();
+</code></pre>
+<ul>
+<li>getField()，获取字段值</li>
+</ul>
+<p>第一行的字段值</p>
+<pre><code class="php">$User = M(&quot;User&quot;); // 实例化User对象
+// 获取ID为3的用户的昵称 
+$nickname = $User-&gt;where(&#39;id=3&#39;)-&gt;getField(&#39;nickname&#39;);
+</code></pre>
+<p>整列的字段值</p>
+<pre><code class="php">$User-&gt;getField(&#39;id&#39;,true); // 获取id数组
+//返回数据格式如array(1,2,3,4,5)一维数组，其中value就是id列的每行的值
+</code></pre>
+<p>两个字段</p>
+<pre><code class="php">$User = M(&quot;User&quot;); // 实例化User对象
+// 获取所有用户的ID和昵称列表 
+$list = $User-&gt;getField(&#39;id,nickname&#39;);
+//两个字段的情况下返回的是array(`id`=&gt;`nickname`)的关联数组，以id的值为key，nickname字段值为value
+</code></pre>
+<p>多个字段的名称</p>
+<pre><code class="php">$list = $User-&gt;getField(&#39;id,nickname,email&#39;);
+//返回的数组格式是array(`id`=&gt;array(`id`=&gt;value,`nickname`=&gt;value,`email`=&gt;value))是一个二维数组，key还是id字段的值，但value是整行的array数组，类似于select()方法的结果遍历将id的值设为数组key
+</code></pre>
+<p>字符串分隔符</p>
+<pre><code class="php">$list = $User-&gt;getField(&#39;id,nickname,email&#39;,&#39;:&#39;);
+//返回的结果就是一个数组，键名是用户id，键值是 nickname:email的输出字符串
+</code></pre>
+<p>getField方法还可以支持限制数量</p>
+<pre><code class="php">$this-&gt;getField(&#39;id,name&#39;,5); // 限制返回5条记录
+$this-&gt;getField(&#39;id&#39;,3); // 获取id数组 限制3条记录
+</code></pre>
+<h3 id="更新数据"><a href="#更新数据" class="headerlink" title="更新数据"></a>更新数据</h3><ul>
+<li><code>save</code>方法</li>
+</ul>
+<p>返回值是<strong>影响的记录数</strong>;</p>
+<p>返回false则表示更新出错;</p>
+<pre><code class="php">$User = M(&quot;User&quot;); // 实例化User对象
+// 要修改的数据对象属性赋值
+$data[&#39;name&#39;] = &#39;ThinkPHP&#39;;
+$data[&#39;email&#39;] = &#39;ThinkPHP@gmail.com&#39;;
+$User-&gt;where(&#39;id=5&#39;)-&gt;save($data); // 根据条件更新记录
+</code></pre>
+<p>对象方式来操作</p>
+<pre><code class="php">$User = M(&quot;User&quot;); // 实例化User对象
+// 要修改的数据对象属性赋值
+$User-&gt;name = &#39;ThinkPHP&#39;;
+$User-&gt;email = &#39;ThinkPHP@gmail.com&#39;;
+$User-&gt;where(&#39;id=5&#39;)-&gt;save(); // 根据条件更新记录
+</code></pre>
+<p>没有条件的时候，默认条件是主键id值，否则数据对象本身也不包含主键字段的话，save方法不会更新任何数据库的记录;</p>
+<pre><code class="php">$User = M(&quot;User&quot;); // 实例化User对象
+// 要修改的数据对象属性赋值
+$data[&#39;id&#39;] = 5;//条件
+$data[&#39;name&#39;] = &#39;ThinkPHP&#39;;
+$data[&#39;email&#39;] = &#39;ThinkPHP@gmail.com&#39;;
+$User-&gt;save($data); // 根据条件保存修改的数据
+</code></pre>
+<ul>
+<li>setField更新个别字段</li>
+</ul>
+<p>更改用户的name值为ThinkPHP</p>
+<pre><code class="php">$User = M(&quot;User&quot;); // 实例化User对象
+// 更改用户的name值
+$User-&gt; where(&#39;id=5&#39;)-&gt;setField(&#39;name&#39;,&#39;ThinkPHP&#39;);
+</code></pre>
+<p>更新多个字段</p>
+<pre><code class="php">
+</code></pre>
+<ul>
+<li><code>setInc</code>和<code>setDec</code></li>
+</ul>
+<p>统计字段（通常指的是数字类型）的更新</p>
+<pre><code class="php">User = M(&quot;User&quot;); // 实例化User对象
+$User-&gt;where(&#39;id=5&#39;)-&gt;setInc(&#39;score&#39;,3); // 用户的积分加3
+$User-&gt;where(&#39;id=5&#39;)-&gt;setInc(&#39;score&#39;); // 用户的积分加1
+$User-&gt;where(&#39;id=5&#39;)-&gt;setDec(&#39;score&#39;,5); // 用户的积分减5
+$User-&gt;where(&#39;id=5&#39;)-&gt;setDec(&#39;score&#39;); // 用户的积分减1
+
+//延迟更新
+$Article = M(&quot;Article&quot;); // 实例化Article对象
+$Article-&gt;where(&#39;id=5&#39;)-&gt;setInc(&#39;view&#39;,1); // 文章阅读数加1
+$Article-&gt;where(&#39;id=5&#39;)-&gt;setInc(&#39;view&#39;,1,60); // 文章阅读数加1，并且延迟60秒更新（写入）
+</code></pre>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><ul>
+<li>delete方法</li>
+</ul>
+<blockquote>
+<p>返回值是删除的记录数；</p>
+<p>返回值是false则表示SQL出错</p>
+<p>返回值如果为0表示没有删除任何数据</p>
+</blockquote>
+<p>删除主键数据</p>
+<pre><code class="php">$Form = M(&#39;Form&#39;);
+$Form-&gt;delete(5);
+
+//
+$User-&gt;delete(&#39;1,2,5&#39;); // 删除主键为1,2和5的用户数据
+</code></pre>
+<p>根据条件删除</p>
+<pre><code class="php">$User = M(&quot;User&quot;); // 实例化User对象
+$User-&gt;where(&#39;id=5&#39;)-&gt;delete(); // 删除id为5的用户数据
+$User-&gt;where(&#39;status=0&#39;)-&gt;delete(); // 删除所有状态为0的用户数据
+</code></pre>
+<p>删除所有数据</p>
+<p>避免错删数据，如果没有传入任何条件进行删除操作的话，不会执行删除操作</p>
+<pre><code class="php">//无效
+$User = M(&quot;User&quot;); // 实例化User对象
+$User-&gt;delete(); 
+
+//
+$User = M(&quot;User&quot;); // 实例化User对象
+$User-&gt;where(&#39;1&#39;)-&gt;delete(); 
+</code></pre>
+<h3 id="ActiveRecord"><a href="#ActiveRecord" class="headerlink" title="ActiveRecord"></a>ActiveRecord</h3><ul>
+<li>创建数据</li>
+</ul>
+<pre><code class="php">$User = M(&quot;User&quot;); // 实例化User对象
+// 然后直接给数据对象赋值
+$User-&gt;name = &#39;ThinkPHP&#39;;
+$User-&gt;email = &#39;ThinkPHP@gmail.com&#39;;
+// 把数据对象添加到数据库
+$User-&gt;add();
+</code></pre>
+<ul>
+<li>查询</li>
+</ul>
+<p>find()主键</p>
+<pre><code class="php">$User = M(&quot;User&quot;); // 实例化User对象
+// 查找id为8的用户数据
+$User-&gt;find(8);
+</code></pre>
+<p>根据某个字段查询</p>
+<pre><code class="php">$User = M(&quot;User&quot;); // 实例化User对象
+$User-&gt;getByName(&quot;ThinkPHP&quot;);
+</code></pre>
+<p>查询数据集</p>
+<pre><code class="php">//主键
+$userList = $User-&gt;select(&#39;1,3,8&#39;);
+</code></pre>
+<ul>
+<li>更新记录</li>
+</ul>
+<pre><code class="php">$User-&gt;find(1); // 查找主键为1的数据
+$User-&gt;name = &#39;TOPThink&#39;; // 修改数据对象
+$User-&gt;save(); // 保存当前数据对象
+
+// 可以不查询就保存
+$User-&gt;id = 1;
+$User-&gt;name = &#39;TOPThink&#39;; // 修改数据对象
+$User-&gt;save(); // 保存当前数据对象
+</code></pre>
+<ul>
+<li>删除</li>
+</ul>
+<pre><code class="php">$User-&gt;find(2);
+$User-&gt;delete(); // 删除当前的数据对象
+
+//或者直接根据主键进行删除
+$User-&gt;delete(8); // 删除主键为8的数据
+$User-&gt;delete(&#39;5,6&#39;); // 删除主键为5、6的多个数据
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>tp3.2使用心得</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="silver@wq">silver@wq</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-10-15, 13:44:48</p>
+    <p><span class="copy-title">最后更新:</span>2020-01-19, 08:55:21</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/post/525017a6.html" title="tp3.2使用心得">http://blog.silverwq.top/post/525017a6.html</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2019 Silverwq</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="/js/script.js?v=1.0.1"></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#规范','#快捷键','#elasticSearch','#php','#go','#http','#laradock','#mysql','#ssh','#thinkPhp','#virtualBox','#yii','#android','#chkConfig','#cmder','#chrome','#crontab','#ditto','#gitBash','#cmd','#docker','#git','#hexo','#listary','#linux','#memcached','#navicat','#nginx','#phpStorm','#sublime','#vagrant','#vim','#windows','#yum',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out">
+
+</div>
+<div class="mobile-menus">
+    
+    
+    
+    
+    <a class="dynamic-menu " target="_blank" href="https://github.com/wuqiyin" rel="external nofollow noopener noreferrer">github</a>
+    
+</div>
+
+
+</html>
